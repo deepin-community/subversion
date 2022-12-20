@@ -1,0 +1,23 @@
+From: Steve Langasek <steve.langasek@canonical.com>
+Date: Sun, 12 Jan 2020 23:25:01 -0800
+Subject: use python3 as the interpreter now for tests, not python
+
+/usr/bin/python is no longer guaranteed to exist, per PEP 394.  Use
+python3 instead for compatibility.
+
+Closes: #948770
+Signed-off-by: James McCoy <jamessan@debian.org>
+---
+ subversion/tests/cmdline/svneditor.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/subversion/tests/cmdline/svneditor.py b/subversion/tests/cmdline/svneditor.py
+index 7f59987..4699dc1 100755
+--- a/subversion/tests/cmdline/svneditor.py
++++ b/subversion/tests/cmdline/svneditor.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ #
+ #  svneditor.py: a mock $SVN_EDITOR for the Subversion test suite
+ #

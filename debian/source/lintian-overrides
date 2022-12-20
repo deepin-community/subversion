@@ -1,0 +1,6 @@
+# We don't want a random binNMU to change the bdb version to one that
+# nobody has tested with svn.  So we have to hardcode it.
+build-depends-on-versioned-berkeley-db
+
+# Upstream releases are signed by multiple people, using a concatenated file
+concatenated-upstream-signatures
