@@ -37,13 +37,13 @@ index f484519..c6e3d77 100644
  
    if (!val || !*val)
 diff --git a/subversion/libsvn_subr/config_file.c b/subversion/libsvn_subr/config_file.c
-index 9c0a83a..ffb9524 100644
+index a437c89..1ae583f 100644
 --- a/subversion/libsvn_subr/config_file.c
 +++ b/subversion/libsvn_subr/config_file.c
-@@ -1447,7 +1447,7 @@ svn_config_ensure(const char *config_dir, apr_pool_t *pool)
-         "### passed to the tunnel agent as <user>@<hostname>.)  If the"      NL
-         "### built-in ssh scheme were not predefined, it could be defined"   NL
-         "### as:"                                                            NL
+@@ -1448,7 +1448,7 @@ svn_config_ensure(const char *config_dir, apr_pool_t *pool)
+         "### <hostinfo> argument in the usual way: <user>@<hostname>:<port>."NL
+         "### If the built-in ssh scheme were not predefined, it could be"    NL
+         "### defined as:"                                                    NL
 -        "# ssh = $SVN_SSH ssh -q --"                                         NL
 +        "# ssh = $SVN_SSH ssh -q -o ControlMaster=no --"                     NL
          "### If you wanted to define a new 'rsh' scheme, to be used with"    NL

@@ -16,7 +16,7 @@ be ABI-compatible again if and when we move to apr-2.x.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/configure.ac b/configure.ac
-index 42a9f14..bfd7fa1 100644
+index 31f5368..282ecc3 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -106,7 +106,7 @@ if test `expr $apr_version : 2` -ne 0; then

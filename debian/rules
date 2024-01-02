@@ -12,11 +12,13 @@
 
 include /usr/share/dpkg/architecture.mk
 
+DEB_BUILD_MAINT_OPTIONS=future=+lfs
+
 # Workaround an issue with PIC/PIE on certain architectures (c.f., #942798)
 ifneq (,$(filter x32,$(DEB_HOST_ARCH)))
-  DEB_BUILD_MAINT_OPTIONS=hardening=+all,-pie
+  DEB_BUILD_MAINT_OPTIONS+=hardening=+all,-pie
 else
-  DEB_BUILD_MAINT_OPTIONS=hardening=+all
+  DEB_BUILD_MAINT_OPTIONS+=hardening=+all
 endif
 
 include /usr/share/dpkg/default.mk
@@ -27,14 +29,10 @@ include /usr/share/dpkg/default.mk
 # with DISABLE_JAVAHL_ARCHS.
 
 ENABLE_JAVAHL        = yes
-DISABLE_JAVAHL_ARCHS = hurd-i386 hppa sparc
-ifneq (,$(filter $(DEB_HOST_ARCH), $(DISABLE_JAVAHL_ARCHS)))
-  ENABLE_JAVAHL =
-endif
-
 ENABLE_APACHE        = yes
 ENABLE_RUBY          = yes
 ENABLE_PYTHON        = yes
+ENABLE_KWALLET       = yes
 
 DEB_BUILDDIR     = $(CURDIR)/BUILD
 AUTH_LIB_DIRS    = $(DEB_BUILDDIR)/subversion/libsvn_auth_gnome_keyring/.libs:$(DEB_BUILDDIR)/subversion/libsvn_auth_kwallet/.libs
@@ -43,18 +41,37 @@ BASH_COMPL_DIR   = $(shell pkg-config --variable=completionsdir bash-completion)
 export LANG = C
 export HOME = $(DEB_BUILDDIR)/dummy_home
 
+DISABLE_JAVAHL_ARCHS = hurd-i386 hppa sparc kfreebsd-i836 kfreebsd-amd64
+ifneq (,$(filter $(DEB_HOST_ARCH), $(DISABLE_JAVAHL_ARCHS)))
+  ENABLE_JAVAHL =
+endif
+
 ifeq (,$(filter libsvn-java,$(shell dh_listpackages)))
   ENABLE_JAVAHL =
+endif
+
+DISABLE_RUBY_ARCHS = ia64 kfreebsd-i386 kfreebsd-amd64
+ifneq (,$(filter $(DEB_HOST_ARCH), $(DISABLE_RUBY_ARCHS)))
+  ENABLE_RUBY =
 endif
 
 ifeq (,$(filter ruby-svn,$(shell dh_listpackages)))
   ENABLE_RUBY =
 endif
 
+DISABLE_KWALLET_ARCHS = kfreebsd-i386 kfreebsd-amd64
+ifneq (,$(filter $(DEB_HOST_ARCH), $(DISABLE_KWALLET_ARCHS)))
+  ENABLE_KWALLET =
+endif
+
+ifneq (,$(filter pkg.subversion.nokde,$(DEB_BUILD_PROFILES)))
+  ENABLE_KWALLET =
+endif
+
 # ENABLE_FOO -> DEB_OPT_WITH_FOO=1
 # DEB_BUILD_OPTIONS='foo bar' -> DEB_OPT_FOO=1, DEB_OPT_BAR=1
 # DEB_BUILD_OPTIONS='no-foo' -> DEB_OPT_WITH_FOO=""
-$(foreach o, JAVAHL APACHE RUBY PYTHON, $(if $(filter y yes 1,$(ENABLE_$o)), \
+$(foreach o, JAVAHL APACHE RUBY PYTHON KWALLET, $(if $(filter y yes 1,$(ENABLE_$o)), \
     $(eval DEB_OPT_WITH_$o := 1),$(eval DEB_OPT_WITH_$o :=)))
 d_b_o:=$(shell echo "$$DEB_BUILD_OPTIONS" | tr 'a-z-,' 'A-Z_ ')
 $(foreach o, $(d_b_o), \
@@ -62,9 +79,9 @@ $(foreach o, $(d_b_o), \
 $(foreach o, $(filter NO_%,$(d_b_o)), $(eval DEB_OPT_$(subst NO_,WITH_,$o) :=))
 $(if $(DEB_OPT_PARALLEL),$(eval MAKEFLAGS += -j$(DEB_OPT_PARALLEL)))
 
+MAKE_B = $(MAKE) -C $(DEB_BUILDDIR)
 ifndef DEB_OPT_TERSE
-  export LTFLAGS = --tag=CC
-  export LTCXXFLAGS = --tag=CXX
+  MAKE_B += LTFLAGS="--tag=CC --verbose" LTCXXFLAGS="--tag=CXX --verbose"
 endif
 
 export CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
@@ -106,13 +123,14 @@ confflags = \
 		--with-swig=/usr/bin/swig \
 		--with-lz4 \
 		--with-utf8proc \
+		--enable-plaintext-password-storage \
 		--with-gnome-keyring
 
 ifdef DEB_OPT_DEBUG
   confflags+= --enable-debug
 endif
 
-ifeq ($(filter pkg.subversion.nokde,$(DEB_BUILD_PROFILES)),)
+ifdef DEB_OPT_WITH_KWALLET
   confflags += --with-kwallet=/usr/include:$(libdir)
 endif
 
@@ -180,10 +198,10 @@ endef
 %:
 	dh $@ --with python3 --with apache2 --builddirectory=BUILD
 
-override_dh_update_autotools_config:
-	$(DONT_BE_ROOT)
-	dh_update_autotools_config
+execute_after_dh_update_autotools_config:
 	./autogen.sh
+
+override_dh_autoreconf:
 
 override_dh_auto_configure:
 	mkdir -p $(HOME)
@@ -191,8 +209,8 @@ override_dh_auto_configure:
 
 	# Ensure we're able to regenerate the swig bindings, in case we need to
 	# patch them.
-	$(MAKE) -C $(DEB_BUILDDIR) mkdir-init
-	$(MAKE) -C $(DEB_BUILDDIR) extraclean-bindings
+	$(MAKE_B) mkdir-init
+	$(MAKE_B) extraclean-bindings
 ifdef DEB_OPT_WITH_PYTHON
 	for v in $(PYVERSIONS); do \
 		cp -la $(PY_DIR) $(PY_DIR)$$v; \
@@ -226,53 +244,55 @@ check:
 	fi
 
 check-swig-rb check-javahl:
-	$(MAKE) -C $(DEB_BUILDDIR) $@ $(check_defs) PARALLEL=$(DEB_OPT_PARALLEL)
+	$(MAKE_B) $@ $(check_defs) PARALLEL=$(DEB_OPT_PARALLEL)
 
 check-swig-pl:
-	$(MAKE) -C $(DEB_BUILDDIR) $@ MAN3EXT=3perl $(check_defs)
-	$(MAKE) -C $(PERL_DIR) test MAN3EXT=3perl LC_ALL=C
+	$(MAKE_B) $@ MAN3EXT=3perl $(check_defs)
+	$(MAKE)  -C $(PERL_DIR) test MAN3EXT=3perl LC_ALL=C
 
 check-swig-py:
 	$(call allpy, \
-	  $(MAKE) -C $(DEB_BUILDDIR) $@ PYTHON=python$$v PYVER=$$v $(check_defs))
+	  $(MAKE_B) $@ PYTHON=python$$v PYVER=$$v $(check_defs))
 
 override_dh_auto_build-arch:
 	$(DONT_BE_ROOT)
 	# note: autogen-swig does not support -jN
 ifdef DEB_OPT_WITH_PYTHON
-	$(call allpy, $(MAKE) -C $(DEB_BUILDDIR) -j1 autogen-swig)
+	$(call allpy, $(MAKE_B) -j1 autogen-swig-py)
 endif
-	$(MAKE) -C $(DEB_BUILDDIR) all tools
+	$(MAKE_B) -j1 autogen-swig-pl
+ifdef DEB_OPT_WITH_RUBY
+	$(MAKE_B) -j1 autogen-swig-rb
+endif
+	$(MAKE_B) all tools
 	# Run svn once, to make sure it populates $(HOME)/.subversion/*
 	env LD_LIBRARY_PATH="$(AUTH_LIB_DIRS):$(LD_LIBRARY_PATH)" $(DEB_BUILDDIR)/subversion/svn/svn --version > /dev/null
 ifdef DEB_OPT_WITH_PYTHON
 	$(call allpy, \
-	  $(MAKE) -C $(DEB_BUILDDIR) swig-py PYTHON=python$$v PYVER=$$v \
+	  $(MAKE_B) swig-py PYTHON=python$$v PYVER=$$v \
 	            PYTHON_INCLUDES="$$pyinc" \
 	            swig_pydir=$$pylib/libsvn swig_pydir_extra=$$pylib/svn)
 endif
 	# note: swig-pl seems to have trouble with -jN
-	$(MAKE) -C $(DEB_BUILDDIR) -j1 swig-pl MAN3EXT=3perl
+	$(MAKE_B) -j1 swig-pl MAN3EXT=3perl
 	$(MAKE) -C $(PERL_DIR) all \
 		MAN3EXT=3perl OPTIMIZE="-g -Wall $(CFLAGS)"
 ifdef DEB_OPT_WITH_RUBY
-	$(MAKE) -C $(DEB_BUILDDIR) swig-rb $(rb_defs)
+	$(MAKE_B) swig-rb $(rb_defs)
 endif
 ifdef DEB_OPT_WITH_JAVAHL
-	$(MAKE) -C $(DEB_BUILDDIR) -j1 javahl
+	$(MAKE_B) -j1 javahl
 endif
 
 override_dh_auto_build-indep:
 	mkdir -p $(DEB_BUILDDIR)/doc/doxygen
 	dh_auto_build --builddirectory=BUILD -- doc-api locale-gnu-pot
 
-override_dh_auto_clean:
+execute_before_dh_auto_clean:
 	! [ -f $(DEB_BUILDDIR)/Makefile ] || $(MAKE) -C $(DEB_BUILDDIR) extraclean
-	dh_auto_clean --builddirectory=BUILD
-	$(RM) -r subversion/bindings/swig/ruby/test/.test-result
+
+execute_after_dh_auto_clean:
 	find -name \*.pyc -exec $(RM) {} +
-	# these are (re)generated by autogen.sh
-	$(RM) subversion/po/subversion.pot
 
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES
@@ -284,13 +304,13 @@ override_dh_auto_install-indep:
 
 PRIVATE_LIBS = auth_gnome_keyring auth_kwallet fs_base fs_fs fs_util fs_x ra_local ra_serf swig_perl $(foreach v, $(PYVERSIONS), swig_py$(v)) swig_ruby
 override_dh_auto_install-arch:
-	$(MAKE) -C $(DEB_BUILDDIR) -j1 local-install install-tools \
+	$(MAKE_B) -j1 local-install install-tools \
 		DESTDIR=$(CURDIR)/debian/tmp toolsdir=/usr/bin pkgconfig_dir=$(libdir)/pkgconfig
 
 ifdef DEB_OPT_WITH_PYTHON
 	$(call allpy, \
 	  set -e; \
-	  $(MAKE) -C $(DEB_BUILDDIR) install-swig-py DESTDIR=$(CURDIR)/debian/tmp \
+	  $(MAKE_B) install-swig-py DESTDIR=$(CURDIR)/debian/tmp \
 	            PYTHON=python$$v PYVER=$$v \
 	            swig_pydir=$$pylib/libsvn swig_pydir_extra=$$pylib/svn; \
 	  for ext in debian/tmp/usr/lib/python3/dist-packages/libsvn/*.so; do \
@@ -302,19 +322,19 @@ ifdef DEB_OPT_WITH_PYTHON
 endif
 
 ifdef DEB_OPT_WITH_JAVAHL
-	$(MAKE) -C $(DEB_BUILDDIR) install-javahl install-javahl-java \
+	$(MAKE_B) install-javahl install-javahl-java \
 		DESTDIR=$(CURDIR)/debian/tmp \
 		javahl_javadir=/usr/share/java \
 		javahl_javahdir=/usr/include/svn-javahl
 endif
 
-	$(MAKE) -C $(DEB_BUILDDIR) install-swig-pl-lib \
+	$(MAKE_B) install-swig-pl-lib \
 		DESTDIR=$(CURDIR)/debian/tmp
 	$(MAKE) -C $(PERL_DIR) install \
 		MAN3EXT=3perl DESTDIR=$(CURDIR)/debian/tmp INSTALLDIRS=vendor
 
 ifdef DEB_OPT_WITH_RUBY
-	$(MAKE) -C $(DEB_BUILDDIR) install-swig-rb $(rb_defs) \
+	$(MAKE_B) install-swig-rb $(rb_defs) \
 		DESTDIR=$(CURDIR)/debian/tmp
 endif
 

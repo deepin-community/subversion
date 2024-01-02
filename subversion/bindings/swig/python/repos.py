@@ -142,8 +142,8 @@ import libsvn.core
 import libsvn.delta
 import libsvn.fs
 
-def svn_swig_py_make_parse_fns3(*args) -> "svn_repos_parse_fns3_t const **, void **":
-    """svn_swig_py_make_parse_fns3(PyObject * py_parse_fns3, apr_pool_t pool)"""
+def svn_swig_py_make_parse_fns3(*args) -> "svn_repos_parse_fns3_t const **":
+    """svn_swig_py_make_parse_fns3(apr_pool_t pool)"""
     return _repos.svn_swig_py_make_parse_fns3(*args)
 
 def svn_repos_version() -> "svn_version_t const *":
