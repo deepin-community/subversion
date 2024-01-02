@@ -10,7 +10,7 @@ be real bugs with real consequences.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index 1390a69..cee3c00 100644
+index 49f7351..3e5b392 100644
 --- a/Makefile.in
 +++ b/Makefile.in
 @@ -156,7 +156,7 @@ SWIG_PY_ERRMSG = @SWIG_PY_ERRMSG@

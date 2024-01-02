@@ -1,0 +1,8 @@
+BUILD/
+subversion/bindings/swig/ruby/test/.test-result/
+subversion/po/subversion.pot
+# These get regenerated and vary slightly from original source, so need to be removed
+subversion/libsvn_client/libsvn_client.pc.in
+subversion/libsvn_ra/libsvn_ra.pc.in
+subversion/libsvn_subr/config_keys.inc
+subversion/libsvn_subr/errorcode.inc

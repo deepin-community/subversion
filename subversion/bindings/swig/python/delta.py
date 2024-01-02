@@ -140,8 +140,8 @@ _set_instance_attr = _swig_setattr_nondynamic_method(object.__setattr__)
 
 import libsvn.core
 
-def svn_swig_py_make_editor(*args) -> "svn_delta_editor_t const **, void **":
-    """svn_swig_py_make_editor(PyObject * py_editor, apr_pool_t pool)"""
+def svn_swig_py_make_editor(*args) -> "svn_delta_editor_t const **":
+    """svn_swig_py_make_editor(apr_pool_t pool)"""
     return _delta.svn_swig_py_make_editor(*args)
 SVN_DELTA_COMPRESSION_LEVEL_NONE = _delta.SVN_DELTA_COMPRESSION_LEVEL_NONE
 SVN_DELTA_COMPRESSION_LEVEL_MAX = _delta.SVN_DELTA_COMPRESSION_LEVEL_MAX
@@ -1670,6 +1670,49 @@ class svn_file_rev_handler_old_t(object):
 
 svn_file_rev_handler_old_t_swigregister = _delta.svn_file_rev_handler_old_t_swigregister
 svn_file_rev_handler_old_t_swigregister(svn_file_rev_handler_old_t)
+
+
+# Baton container class for editor/parse_fns3 batons and their decendants.
+class _ItemBaton:
+  def __init__(self, editor, pool, baton=None):
+    self.pool = pool if pool else libsvn.core.svn_pool_create()
+    self.baton = baton
+    self.editor = editor
+
+  def get_ancestor(self):
+    raise NotImplementedError
+
+  def make_decendant(self, pool, baton=None):
+    return _DecBaton(self, pool, baton)
+
+
+class _DecBaton(_ItemBaton):
+  def __init__(self, parent, pool, baton=None):
+    import weakref
+    _ItemBaton.__init__(self, parent.editor, pool, baton)
+    self._anc = weakref.ref(parent.get_ancestor())
+    self._anc().hold_baton(self)
+
+  def get_ancestor(self):
+    return self._anc()
+
+  def release_self(self):
+    self._anc().release_baton(self)
+
+
+class _AncBaton(_ItemBaton):
+  def __init__(self, editor, pool, baton=None):
+    _ItemBaton.__init__(self, editor, pool, baton)
+    self._dec = {}     # hold decendant batons.
+
+  def get_ancestor(self):
+    return self
+
+  def hold_baton(self, baton):
+    self._dec[id(baton)] = baton
+
+  def release_baton(self, baton):
+    del self._dec[id(baton)]
 
 
 # This function is for backwards compatibility only.

@@ -10,11 +10,11 @@ Submitted upstream: http://svn.haxx.se/dev/archive-2008-05/0361.shtml
 ---
  Makefile.in             |  1 +
  build.conf              | 18 +++++++++---------
- build/ac-macros/swig.m4 |  4 +++-
- 3 files changed, 13 insertions(+), 10 deletions(-)
+ build/ac-macros/swig.m4 |  8 +++++---
+ 3 files changed, 15 insertions(+), 12 deletions(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index cee3c00..5eb6f45 100644
+index 3e5b392..5340eb0 100644
 --- a/Makefile.in
 +++ b/Makefile.in
 @@ -148,6 +148,7 @@ BOOST_TEST_CPPFLAGS = @BOOST_CPPFLAGS@ -DBOOST_TEST_DYN_LINK -DBOOST_TEST_NO_MAI
@@ -109,22 +109,40 @@ index d025225..f326305 100644
  lang = python
  path = subversion/bindings/swig/python/libsvn_swig_py
 diff --git a/build/ac-macros/swig.m4 b/build/ac-macros/swig.m4
-index 91c6821..5a7c664 100644
+index 167007d..246170a 100644
 --- a/build/ac-macros/swig.m4
 +++ b/build/ac-macros/swig.m4
-@@ -110,7 +110,8 @@ AC_DEFUN(SVN_FIND_SWIG,
-     AC_CACHE_CHECK([for Python includes], [ac_cv_python_includes],[
-       ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
-     ])
--    SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) $ac_cv_python_includes"
-+    PYTHON_INCLUDES="$ac_cv_python_includes"
-+    SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) \$(PYTHON_INCLUDES)"
- 
-     if test "$ac_cv_python_includes" = "none"; then
-       SWIG_PY_ERRMSG="no distutils found"
-@@ -338,6 +339,7 @@ int main()
-     SWIG_RB_ERRMSG=""
+@@ -105,7 +105,6 @@ AC_DEFUN(SVN_FIND_SWIG,
    fi
+ ])
+ 
+-
+ AC_DEFUN(SVN_DETERMINE_SWIG_OPTS,
+ [
+   m4_ifndef([SVN_RELEASE_MODE],
+@@ -128,7 +127,8 @@ suitable Python interpreter is not found."
+         AC_CACHE_CHECK([for Python includes], [ac_cv_python_includes],[
+         ac_cv_python_includes="`$SWIG_PY_PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
+         ])
+-        SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) $ac_cv_python_includes"
++        PYTHON_INCLUDES="$ac_cv_python_includes"
++        SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) \$(PYTHON_INCLUDES)"
+ 
+         if test "$ac_cv_python_includes" = "none"; then
+           SWIG_PY_ERRMSG="no distutils found"
+@@ -390,7 +390,8 @@ suitable Python interpreter is not found."
+       AC_CACHE_CHECK([for Python includes], [ac_cv_python_includes],[
+         ac_cv_python_includes="`$SWIG_PY_PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
+       ])
+-      SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) $ac_cv_python_includes"
++      PYTHON_INCULDES="$ac_cv_python_includes"
++      SWIG_PY_INCLUDES="\$(SWIG_INCLUDES) \$(PYTHON_INCLUDES)"
+ 
+       if test "$ac_cv_python_includes" = "none"; then
+         SWIG_PY_ERRMSG="no distutils found"
+@@ -583,6 +584,7 @@ int main()
+     fi
+   ])
    AC_SUBST(SWIG)
 +  AC_SUBST(PYTHON_INCLUDES)
    AC_SUBST(SWIG_PY_INCLUDES)

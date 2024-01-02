@@ -1,4 +1,4 @@
 # the ruby script isn't really needed, it's more of an example file
-ruby-script-but-no-ruby-dep usr/share/subversion/hook-scripts/commit-email.rb *
+ruby-script-but-no-ruby-dep *usr/share/subversion/hook-scripts/commit-email.rb*
 # Python dependency is implied by python3-subversion dependency
 python3-script-but-no-python3-dep

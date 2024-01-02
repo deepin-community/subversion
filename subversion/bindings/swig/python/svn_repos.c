@@ -3863,36 +3863,30 @@ extern "C" {
 SWIGINTERN PyObject *_wrap_svn_swig_py_make_parse_fns3(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   svn_repos_parse_fns3_t **arg1 = (svn_repos_parse_fns3_t **) 0 ;
-  void **arg2 = (void **) 0 ;
-  PyObject *arg3 = (PyObject *) 0 ;
-  apr_pool_t *arg4 = (apr_pool_t *) 0 ;
+  apr_pool_t *arg2 = (apr_pool_t *) 0 ;
   apr_pool_t *_global_pool = NULL ;
   PyObject *_global_py_pool = NULL ;
   svn_repos_parse_fns3_t *temp1 ;
-  void *temp2 ;
   PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
   
   if (svn_swig_py_get_pool_arg(args, SWIGTYPE_p_apr_pool_t,
       &_global_py_pool, &_global_pool))
   SWIG_fail;
-  arg4 = _global_pool;
+  arg2 = _global_pool;
   arg1 = &temp1;
-  arg2 = &temp2;
-  if(!PyArg_UnpackTuple(args,(char *)"svn_swig_py_make_parse_fns3",1,2,&obj0,&obj1)) SWIG_fail;
-  arg3 = obj0;
-  if (obj1) {
+  if(!PyArg_UnpackTuple(args,(char *)"svn_swig_py_make_parse_fns3",0,1,&obj0)) SWIG_fail;
+  if (obj0) {
     /* Verify that the user supplied a valid pool */
-    if (obj1 != Py_None && obj1 != _global_py_pool) {
-      SWIG_Python_TypeError(SWIG_TypePrettyName(SWIGTYPE_p_apr_pool_t), obj1);
-      SWIG_arg_fail(svn_argnum_obj1);
+    if (obj0 != Py_None && obj0 != _global_py_pool) {
+      SWIG_Python_TypeError(SWIG_TypePrettyName(SWIGTYPE_p_apr_pool_t), obj0);
+      SWIG_arg_fail(svn_argnum_obj0);
       SWIG_fail;
     }
   }
   {
     svn_swig_py_release_py_lock();
     
-    svn_swig_py_make_parse_fns3((struct svn_repos_parse_fns3_t const **)arg1,arg2,arg3,arg4);
+    svn_swig_py_make_parse_fns3((struct svn_repos_parse_fns3_t const **)arg1,arg2);
     
     svn_swig_py_acquire_py_lock();
     
@@ -3900,12 +3894,6 @@ SWIGINTERN PyObject *_wrap_svn_swig_py_make_parse_fns3(PyObject *SWIGUNUSEDPARM(
   resultobj = SWIG_Py_Void();
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_repos_parse_fns3_t,
-        _global_py_pool, args))
-    
-    ;
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_void,
         _global_py_pool, args))
     
     ;
@@ -22833,7 +22821,7 @@ SWIGINTERN PyObject *svn_repos_authz_warning_func_t_swigregister(PyObject *SWIGU
 
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
-	 { (char *)"svn_swig_py_make_parse_fns3", _wrap_svn_swig_py_make_parse_fns3, METH_VARARGS, (char *)"svn_swig_py_make_parse_fns3(PyObject * py_parse_fns3, apr_pool_t pool)"},
+	 { (char *)"svn_swig_py_make_parse_fns3", _wrap_svn_swig_py_make_parse_fns3, METH_VARARGS, (char *)"svn_swig_py_make_parse_fns3(apr_pool_t pool)"},
 	 { (char *)"svn_repos_version", _wrap_svn_repos_version, METH_VARARGS, (char *)"svn_repos_version() -> svn_version_t const *"},
 	 { (char *)"svn_repos_notify_t_action_set", _wrap_svn_repos_notify_t_action_set, METH_VARARGS, (char *)"svn_repos_notify_t_action_set(svn_repos_notify_t self, svn_repos_notify_action_t action)"},
 	 { (char *)"svn_repos_notify_t_action_get", _wrap_svn_repos_notify_t_action_get, METH_VARARGS, (char *)"svn_repos_notify_t_action_get(svn_repos_notify_t self) -> svn_repos_notify_action_t"},
