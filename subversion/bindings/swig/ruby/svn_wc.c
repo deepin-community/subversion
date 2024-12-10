@@ -2134,7 +2134,7 @@ SWIG_ruby_failed(void)
 } 
 
 
-/*@SWIG:/opt/svnrm/prefix/share/swig/3.0.12/ruby/rubyprimtypes.swg,19,%ruby_aux_method@*/
+/*@SWIG:/home/dsg/svn_release_1.14.5/prefix/share/swig/3.0.12/ruby/rubyprimtypes.swg,19,%ruby_aux_method@*/
 SWIGINTERN VALUE SWIG_AUX_NUM2LONG(VALUE *args)
 {
   VALUE obj = args[0];
@@ -2214,7 +2214,7 @@ SWIGINTERN svn_wc_external_item2_t *svn_wc_external_item2_t_dup(struct svn_wc_ex
     return svn_wc_external_item2_dup(self, pool);
   }
 
-/*@SWIG:/opt/svnrm/prefix/share/swig/3.0.12/ruby/rubyprimtypes.swg,19,%ruby_aux_method@*/
+/*@SWIG:/home/dsg/svn_release_1.14.5/prefix/share/swig/3.0.12/ruby/rubyprimtypes.swg,19,%ruby_aux_method@*/
 SWIGINTERN VALUE SWIG_AUX_NUM2ULONG(VALUE *args)
 {
   VALUE obj = args[0];
@@ -2562,6 +2562,7 @@ _wrap_svn_wc_context_create(int argc, VALUE *argv, VALUE self) {
   svn_wc_context_t *temp1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -2602,7 +2603,8 @@ _wrap_svn_wc_context_create(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_context_t, 0));
@@ -2621,7 +2623,18 @@ _wrap_svn_wc_context_create(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -2646,6 +2659,7 @@ _wrap_svn_wc_context_destroy(int argc, VALUE *argv, VALUE self) {
   svn_wc_context_t *arg1 = (svn_wc_context_t *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -2669,9 +2683,21 @@ _wrap_svn_wc_context_destroy(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   return Qnil;
 }
@@ -2697,6 +2723,7 @@ _wrap_svn_wc_adm_open3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -2744,7 +2771,8 @@ _wrap_svn_wc_adm_open3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -2760,7 +2788,18 @@ _wrap_svn_wc_adm_open3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -2792,6 +2831,7 @@ _wrap_svn_wc_adm_open2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -2835,7 +2875,8 @@ _wrap_svn_wc_adm_open2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -2848,7 +2889,18 @@ _wrap_svn_wc_adm_open2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -2878,6 +2930,7 @@ _wrap_svn_wc_adm_open(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -2917,7 +2970,8 @@ _wrap_svn_wc_adm_open(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -2930,7 +2984,18 @@ _wrap_svn_wc_adm_open(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -2964,6 +3029,7 @@ _wrap_svn_wc_adm_probe_open3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3011,7 +3077,8 @@ _wrap_svn_wc_adm_probe_open3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3027,7 +3094,18 @@ _wrap_svn_wc_adm_probe_open3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3059,6 +3137,7 @@ _wrap_svn_wc_adm_probe_open2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3102,7 +3181,8 @@ _wrap_svn_wc_adm_probe_open2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3115,7 +3195,18 @@ _wrap_svn_wc_adm_probe_open2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3145,6 +3236,7 @@ _wrap_svn_wc_adm_probe_open(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3184,7 +3276,8 @@ _wrap_svn_wc_adm_probe_open(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3197,7 +3290,18 @@ _wrap_svn_wc_adm_probe_open(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3232,6 +3336,7 @@ _wrap_svn_wc_adm_open_anchor(int argc, VALUE *argv, VALUE self) {
   int alloc4 = 0 ;
   int val6 ;
   int ecode6 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3276,7 +3381,8 @@ _wrap_svn_wc_adm_open_anchor(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3302,7 +3408,18 @@ _wrap_svn_wc_adm_open_anchor(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -3330,6 +3447,7 @@ _wrap_svn_wc_adm_retrieve(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3367,7 +3485,8 @@ _wrap_svn_wc_adm_retrieve(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3380,7 +3499,18 @@ _wrap_svn_wc_adm_retrieve(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3408,6 +3538,7 @@ _wrap_svn_wc_adm_probe_retrieve(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3445,7 +3576,8 @@ _wrap_svn_wc_adm_probe_retrieve(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3458,7 +3590,18 @@ _wrap_svn_wc_adm_probe_retrieve(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3492,6 +3635,7 @@ _wrap_svn_wc_adm_probe_try3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3539,7 +3683,8 @@ _wrap_svn_wc_adm_probe_try3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3555,7 +3700,18 @@ _wrap_svn_wc_adm_probe_try3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3587,6 +3743,7 @@ _wrap_svn_wc_adm_probe_try2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3630,7 +3787,8 @@ _wrap_svn_wc_adm_probe_try2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3643,7 +3801,18 @@ _wrap_svn_wc_adm_probe_try2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3673,6 +3842,7 @@ _wrap_svn_wc_adm_probe_try(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3712,7 +3882,8 @@ _wrap_svn_wc_adm_probe_try(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_adm_access_t, 0));
@@ -3725,7 +3896,18 @@ _wrap_svn_wc_adm_probe_try(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -3747,6 +3929,7 @@ _wrap_svn_wc_adm_close2(int argc, VALUE *argv, VALUE self) {
   apr_pool_t *_global_pool ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3778,7 +3961,8 @@ _wrap_svn_wc_adm_close2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     VALUE target;
@@ -3787,7 +3971,18 @@ _wrap_svn_wc_adm_close2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -3805,6 +4000,7 @@ _wrap_svn_wc_adm_close(int argc, VALUE *argv, VALUE self) {
   svn_wc_adm_access_t *arg1 = (svn_wc_adm_access_t *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3828,9 +4024,21 @@ _wrap_svn_wc_adm_close(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   return Qnil;
 }
@@ -3945,6 +4153,7 @@ _wrap_svn_wc_locked2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -3983,7 +4192,8 @@ _wrap_svn_wc_locked2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -3999,7 +4209,18 @@ _wrap_svn_wc_locked2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -4024,6 +4245,7 @@ _wrap_svn_wc_locked(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -4056,7 +4278,8 @@ _wrap_svn_wc_locked(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -4069,7 +4292,18 @@ _wrap_svn_wc_locked(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -4201,6 +4435,7 @@ _wrap_svn_wc_set_adm_dir(int argc, VALUE *argv, VALUE self) {
   int res1 ;
   char *buf1 = 0 ;
   int alloc1 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -4232,7 +4467,8 @@ _wrap_svn_wc_set_adm_dir(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -4242,7 +4478,18 @@ _wrap_svn_wc_set_adm_dir(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -4950,6 +5197,7 @@ _wrap_svn_wc_parse_externals_description3(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -4988,7 +5236,8 @@ _wrap_svn_wc_parse_externals_description3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_array_to_array_external_item2(*arg1));
@@ -5002,7 +5251,18 @@ _wrap_svn_wc_parse_externals_description3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -5032,6 +5292,7 @@ _wrap_svn_wc_parse_externals_description2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -5069,7 +5330,8 @@ _wrap_svn_wc_parse_externals_description2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_array_to_array_external_item2(*arg1));
@@ -5083,7 +5345,18 @@ _wrap_svn_wc_parse_externals_description2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -5113,6 +5386,7 @@ _wrap_svn_wc_parse_externals_description(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -5150,7 +5424,8 @@ _wrap_svn_wc_parse_externals_description(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_swig_type(*arg1,
@@ -5167,7 +5442,18 @@ _wrap_svn_wc_parse_externals_description(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -10694,6 +10980,7 @@ _wrap_svn_wc_check_wc2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -10731,7 +11018,8 @@ _wrap_svn_wc_check_wc2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg1)));
@@ -10747,7 +11035,18 @@ _wrap_svn_wc_check_wc2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -10773,6 +11072,7 @@ _wrap_svn_wc_check_wc(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   int temp2 ;
   int res2 = SWIG_TMPOBJ ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -10805,7 +11105,8 @@ _wrap_svn_wc_check_wc(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res2)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg2)));
@@ -10821,7 +11122,18 @@ _wrap_svn_wc_check_wc(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -10849,6 +11161,7 @@ _wrap_svn_wc_has_binary_prop(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -10886,7 +11199,8 @@ _wrap_svn_wc_has_binary_prop(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -10899,7 +11213,18 @@ _wrap_svn_wc_has_binary_prop(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -10928,6 +11253,7 @@ _wrap_svn_wc_text_modified_p2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -10966,7 +11292,8 @@ _wrap_svn_wc_text_modified_p2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -10979,7 +11306,18 @@ _wrap_svn_wc_text_modified_p2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -11008,6 +11346,7 @@ _wrap_svn_wc_text_modified_p(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -11046,7 +11385,8 @@ _wrap_svn_wc_text_modified_p(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -11059,7 +11399,18 @@ _wrap_svn_wc_text_modified_p(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -11087,6 +11438,7 @@ _wrap_svn_wc_props_modified_p2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -11124,7 +11476,8 @@ _wrap_svn_wc_props_modified_p2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -11137,7 +11490,18 @@ _wrap_svn_wc_props_modified_p2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -11165,6 +11529,7 @@ _wrap_svn_wc_props_modified_p(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -11202,7 +11567,8 @@ _wrap_svn_wc_props_modified_p(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -11215,7 +11581,18 @@ _wrap_svn_wc_props_modified_p(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -13623,6 +14000,7 @@ _wrap_svn_wc_entries_read(int argc, VALUE *argv, VALUE self) {
   apr_hash_t *temp1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -13656,7 +14034,8 @@ _wrap_svn_wc_entries_read(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_swig_type(*arg1,
@@ -13671,7 +14050,18 @@ _wrap_svn_wc_entries_read(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -14551,6 +14941,7 @@ _wrap_svn_wc_conflicted_p3(int argc, VALUE *argv, VALUE self) {
   int res5 ;
   char *buf5 = 0 ;
   int alloc5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -14590,7 +14981,8 @@ _wrap_svn_wc_conflicted_p3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -14609,7 +15001,18 @@ _wrap_svn_wc_conflicted_p3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -14641,6 +15044,7 @@ _wrap_svn_wc_conflicted_p2(int argc, VALUE *argv, VALUE self) {
   int alloc4 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -14680,7 +15084,8 @@ _wrap_svn_wc_conflicted_p2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -14699,7 +15104,18 @@ _wrap_svn_wc_conflicted_p2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -14729,6 +15145,7 @@ _wrap_svn_wc_conflicted_p(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -14767,7 +15184,8 @@ _wrap_svn_wc_conflicted_p(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -14783,7 +15201,18 @@ _wrap_svn_wc_conflicted_p(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -14814,6 +15243,7 @@ _wrap_svn_wc_get_ancestry(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -14852,7 +15282,8 @@ _wrap_svn_wc_get_ancestry(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -14875,7 +15306,18 @@ _wrap_svn_wc_get_ancestry(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -15149,6 +15591,7 @@ _wrap_svn_wc_walk_entries3(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15197,7 +15640,8 @@ _wrap_svn_wc_walk_entries3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg8);
@@ -15210,7 +15654,18 @@ _wrap_svn_wc_walk_entries3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15244,6 +15699,7 @@ _wrap_svn_wc_walk_entries2(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15294,7 +15750,8 @@ _wrap_svn_wc_walk_entries2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -15307,7 +15764,18 @@ _wrap_svn_wc_walk_entries2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15339,6 +15807,7 @@ _wrap_svn_wc_walk_entries(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15385,7 +15854,8 @@ _wrap_svn_wc_walk_entries(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15395,7 +15865,18 @@ _wrap_svn_wc_walk_entries(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15421,6 +15902,7 @@ _wrap_svn_wc_mark_missing_deleted(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15457,7 +15939,8 @@ _wrap_svn_wc_mark_missing_deleted(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15467,7 +15950,18 @@ _wrap_svn_wc_mark_missing_deleted(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -15509,6 +16003,7 @@ _wrap_svn_wc_ensure_adm4(int argc, VALUE *argv, VALUE self) {
   int alloc5 = 0 ;
   long val6 ;
   int ecode6 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15568,7 +16063,8 @@ _wrap_svn_wc_ensure_adm4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15581,7 +16077,18 @@ _wrap_svn_wc_ensure_adm4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15617,6 +16124,7 @@ _wrap_svn_wc_ensure_adm3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15675,7 +16183,8 @@ _wrap_svn_wc_ensure_adm3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15686,7 +16195,18 @@ _wrap_svn_wc_ensure_adm3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15719,6 +16239,7 @@ _wrap_svn_wc_ensure_adm2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15774,7 +16295,8 @@ _wrap_svn_wc_ensure_adm2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15785,7 +16307,18 @@ _wrap_svn_wc_ensure_adm2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15817,6 +16350,7 @@ _wrap_svn_wc_ensure_adm(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15865,7 +16399,8 @@ _wrap_svn_wc_ensure_adm(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15876,7 +16411,18 @@ _wrap_svn_wc_ensure_adm(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -15904,6 +16450,7 @@ _wrap_svn_wc_maybe_set_repos_root(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -15947,7 +16494,8 @@ _wrap_svn_wc_maybe_set_repos_root(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -15957,7 +16505,18 @@ _wrap_svn_wc_maybe_set_repos_root(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -19414,6 +19973,7 @@ _wrap_svn_wc_status3(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -19459,7 +20019,8 @@ _wrap_svn_wc_status3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     /* FIXME: Missing argout typemap: svn_wc_status3 arg 1 (svn_wc_status3_t **) */
@@ -19485,7 +20046,18 @@ _wrap_svn_wc_status3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -19520,6 +20092,7 @@ _wrap_svn_wc_status2(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -19557,7 +20130,8 @@ _wrap_svn_wc_status2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_status2_t, 0));
@@ -19570,7 +20144,18 @@ _wrap_svn_wc_status2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -19598,6 +20183,7 @@ _wrap_svn_wc_status(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -19635,7 +20221,8 @@ _wrap_svn_wc_status(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_status_t, 0));
@@ -19648,7 +20235,18 @@ _wrap_svn_wc_status(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -19686,6 +20284,7 @@ _wrap_svn_wc_walk_status(int argc, VALUE *argv, VALUE self) {
   void *argp7 = 0 ;
   int res7 = 0 ;
   int res9 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -19747,7 +20346,8 @@ _wrap_svn_wc_walk_status(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg11);
@@ -19760,7 +20360,18 @@ _wrap_svn_wc_walk_status(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -19813,6 +20424,7 @@ _wrap_svn_wc_get_status_editor5(int argc, VALUE *argv, VALUE self) {
   void *argp13 = 0 ;
   int res13 = 0 ;
   int res15 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -19892,7 +20504,8 @@ _wrap_svn_wc_get_status_editor5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -19928,7 +20541,18 @@ _wrap_svn_wc_get_status_editor5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
@@ -19985,6 +20609,7 @@ _wrap_svn_wc_get_status_editor4(int argc, VALUE *argv, VALUE self) {
   int res12 ;
   void *argp15 = 0 ;
   int res15 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20054,7 +20679,8 @@ _wrap_svn_wc_get_status_editor4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -20082,7 +20708,18 @@ _wrap_svn_wc_get_status_editor4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   {
@@ -20130,6 +20767,7 @@ _wrap_svn_wc_get_status_editor3(int argc, VALUE *argv, VALUE self) {
   int res10 = 0 ;
   void *argp15 = 0 ;
   int res15 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20193,7 +20831,8 @@ _wrap_svn_wc_get_status_editor3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -20221,7 +20860,18 @@ _wrap_svn_wc_get_status_editor3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   {
@@ -20267,6 +20917,7 @@ _wrap_svn_wc_get_status_editor2(int argc, VALUE *argv, VALUE self) {
   int alloc6 = 0 ;
   void *argp15 = 0 ;
   int res15 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20330,7 +20981,8 @@ _wrap_svn_wc_get_status_editor2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -20358,7 +21010,18 @@ _wrap_svn_wc_get_status_editor2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   {
@@ -20403,6 +21066,7 @@ _wrap_svn_wc_get_status_editor(int argc, VALUE *argv, VALUE self) {
   int res11 ;
   void *argp14 = 0 ;
   int res14 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20471,7 +21135,8 @@ _wrap_svn_wc_get_status_editor(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -20496,7 +21161,18 @@ _wrap_svn_wc_get_status_editor(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -20524,6 +21200,7 @@ _wrap_svn_wc_status_set_repos_locks(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20564,7 +21241,8 @@ _wrap_svn_wc_status_set_repos_locks(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -20574,7 +21252,18 @@ _wrap_svn_wc_status_set_repos_locks(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -20609,6 +21298,7 @@ _wrap_svn_wc_copy3(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20659,7 +21349,8 @@ _wrap_svn_wc_copy3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -20673,7 +21364,18 @@ _wrap_svn_wc_copy3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -20708,6 +21410,7 @@ _wrap_svn_wc_copy2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20757,7 +21460,8 @@ _wrap_svn_wc_copy2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg5);
@@ -20771,7 +21475,18 @@ _wrap_svn_wc_copy2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -20807,6 +21522,7 @@ _wrap_svn_wc_copy(int argc, VALUE *argv, VALUE self) {
   char *buf3 = 0 ;
   int alloc3 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20862,7 +21578,8 @@ _wrap_svn_wc_copy(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg5);
@@ -20876,7 +21593,18 @@ _wrap_svn_wc_copy(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -20912,6 +21640,7 @@ _wrap_svn_wc_move(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -20962,7 +21691,8 @@ _wrap_svn_wc_move(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -20976,7 +21706,18 @@ _wrap_svn_wc_move(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -21009,6 +21750,7 @@ _wrap_svn_wc_delete4(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21055,7 +21797,8 @@ _wrap_svn_wc_delete4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -21068,7 +21811,18 @@ _wrap_svn_wc_delete4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21099,6 +21853,7 @@ _wrap_svn_wc_delete3(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21144,7 +21899,8 @@ _wrap_svn_wc_delete3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -21157,7 +21913,18 @@ _wrap_svn_wc_delete3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -21187,6 +21954,7 @@ _wrap_svn_wc_delete2(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21231,7 +21999,8 @@ _wrap_svn_wc_delete2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -21244,7 +22013,18 @@ _wrap_svn_wc_delete2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -21275,6 +22055,7 @@ _wrap_svn_wc_delete(int argc, VALUE *argv, VALUE self) {
   void *argp2 = 0 ;
   int res2 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21325,7 +22106,8 @@ _wrap_svn_wc_delete(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -21338,7 +22120,18 @@ _wrap_svn_wc_delete(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -21368,6 +22161,7 @@ _wrap_svn_wc_add_from_disk3(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21398,7 +22192,7 @@ _wrap_svn_wc_add_from_disk3(int argc, VALUE *argv, VALUE self) {
     arg3 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[2], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg3)) {
+      if (arg3 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[2], rb_pool);
@@ -21426,7 +22220,8 @@ _wrap_svn_wc_add_from_disk3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21436,7 +22231,18 @@ _wrap_svn_wc_add_from_disk3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21465,6 +22271,7 @@ _wrap_svn_wc_add_from_disk2(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21495,7 +22302,7 @@ _wrap_svn_wc_add_from_disk2(int argc, VALUE *argv, VALUE self) {
     arg3 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[2], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg3)) {
+      if (arg3 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[2], rb_pool);
@@ -21522,7 +22329,8 @@ _wrap_svn_wc_add_from_disk2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21532,7 +22340,18 @@ _wrap_svn_wc_add_from_disk2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21560,6 +22379,7 @@ _wrap_svn_wc_add_from_disk(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21600,7 +22420,8 @@ _wrap_svn_wc_add_from_disk(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21610,7 +22431,18 @@ _wrap_svn_wc_add_from_disk(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21645,6 +22477,7 @@ _wrap_svn_wc_add4(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21704,7 +22537,8 @@ _wrap_svn_wc_add4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -21717,7 +22551,18 @@ _wrap_svn_wc_add4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -21752,6 +22597,7 @@ _wrap_svn_wc_add3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21811,7 +22657,8 @@ _wrap_svn_wc_add3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -21824,7 +22671,18 @@ _wrap_svn_wc_add3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -21858,6 +22716,7 @@ _wrap_svn_wc_add2(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -21914,7 +22773,8 @@ _wrap_svn_wc_add2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -21927,7 +22787,18 @@ _wrap_svn_wc_add2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -21962,6 +22833,7 @@ _wrap_svn_wc_add(int argc, VALUE *argv, VALUE self) {
   long val4 ;
   int ecode4 = 0 ;
   int res8 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22024,7 +22896,8 @@ _wrap_svn_wc_add(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -22037,7 +22910,18 @@ _wrap_svn_wc_add(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -22073,6 +22957,7 @@ _wrap_svn_wc_add_repos_file4(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   long val8 ;
   int ecode8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22109,7 +22994,7 @@ _wrap_svn_wc_add_repos_file4(int argc, VALUE *argv, VALUE self) {
     arg5 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[4], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg5)) {
+      if (arg5 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[4], rb_pool);
@@ -22126,7 +23011,7 @@ _wrap_svn_wc_add_repos_file4(int argc, VALUE *argv, VALUE self) {
     arg6 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[5], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg6)) {
+      if (arg6 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[5], rb_pool);
@@ -22165,7 +23050,8 @@ _wrap_svn_wc_add_repos_file4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -22178,7 +23064,18 @@ _wrap_svn_wc_add_repos_file4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -22216,6 +23113,7 @@ _wrap_svn_wc_add_repos_file3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val8 ;
   int ecode8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22252,7 +23150,7 @@ _wrap_svn_wc_add_repos_file3(int argc, VALUE *argv, VALUE self) {
     arg5 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[4], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg5)) {
+      if (arg5 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[4], rb_pool);
@@ -22269,7 +23167,7 @@ _wrap_svn_wc_add_repos_file3(int argc, VALUE *argv, VALUE self) {
     arg6 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[5], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg6)) {
+      if (arg6 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[5], rb_pool);
@@ -22312,7 +23210,8 @@ _wrap_svn_wc_add_repos_file3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -22325,7 +23224,18 @@ _wrap_svn_wc_add_repos_file3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -22362,6 +23272,7 @@ _wrap_svn_wc_add_repos_file2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   long val8 ;
   int ecode8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22404,7 +23315,7 @@ _wrap_svn_wc_add_repos_file2(int argc, VALUE *argv, VALUE self) {
     arg5 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[4], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg5)) {
+      if (arg5 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[4], rb_pool);
@@ -22421,7 +23332,7 @@ _wrap_svn_wc_add_repos_file2(int argc, VALUE *argv, VALUE self) {
     arg6 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[5], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg6)) {
+      if (arg6 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[5], rb_pool);
@@ -22456,7 +23367,8 @@ _wrap_svn_wc_add_repos_file2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -22467,7 +23379,18 @@ _wrap_svn_wc_add_repos_file2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -22500,6 +23423,7 @@ _wrap_svn_wc_add_repos_file(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val6 ;
   int ecode6 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22537,7 +23461,7 @@ _wrap_svn_wc_add_repos_file(int argc, VALUE *argv, VALUE self) {
     arg4 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[3], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg4)) {
+      if (arg4 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[3], rb_pool);
@@ -22572,7 +23496,8 @@ _wrap_svn_wc_add_repos_file(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -22582,7 +23507,18 @@ _wrap_svn_wc_add_repos_file(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -22612,6 +23548,7 @@ _wrap_svn_wc_remove_from_revision_control2(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22654,7 +23591,8 @@ _wrap_svn_wc_remove_from_revision_control2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -22667,7 +23605,18 @@ _wrap_svn_wc_remove_from_revision_control2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -22697,6 +23646,7 @@ _wrap_svn_wc_remove_from_revision_control(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22739,7 +23689,8 @@ _wrap_svn_wc_remove_from_revision_control(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -22752,7 +23703,18 @@ _wrap_svn_wc_remove_from_revision_control(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -22792,6 +23754,7 @@ _wrap_svn_wc_resolved_conflict5(int argc, VALUE *argv, VALUE self) {
   int alloc5 = 0 ;
   int val7 ;
   int ecode7 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22851,7 +23814,8 @@ _wrap_svn_wc_resolved_conflict5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -22865,7 +23829,18 @@ _wrap_svn_wc_resolved_conflict5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -22903,6 +23878,7 @@ _wrap_svn_wc_resolved_conflict4(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   int val7 ;
   int ecode7 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -22958,7 +23934,8 @@ _wrap_svn_wc_resolved_conflict4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg11);
@@ -22971,7 +23948,18 @@ _wrap_svn_wc_resolved_conflict4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -23007,6 +23995,7 @@ _wrap_svn_wc_resolved_conflict3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   int val6 ;
   int ecode6 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23061,7 +24050,8 @@ _wrap_svn_wc_resolved_conflict3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -23074,7 +24064,18 @@ _wrap_svn_wc_resolved_conflict3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -23107,6 +24108,7 @@ _wrap_svn_wc_resolved_conflict2(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23154,7 +24156,8 @@ _wrap_svn_wc_resolved_conflict2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -23167,7 +24170,18 @@ _wrap_svn_wc_resolved_conflict2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -23199,6 +24213,7 @@ _wrap_svn_wc_resolved_conflict(int argc, VALUE *argv, VALUE self) {
   void *argp2 = 0 ;
   int res2 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23248,7 +24263,8 @@ _wrap_svn_wc_resolved_conflict(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -23258,7 +24274,18 @@ _wrap_svn_wc_resolved_conflict(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -23295,6 +24322,7 @@ _wrap_svn_wc_queue_committed4(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp9 = 0 ;
   int res9 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23353,7 +24381,8 @@ _wrap_svn_wc_queue_committed4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -23363,7 +24392,18 @@ _wrap_svn_wc_queue_committed4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -23399,6 +24439,7 @@ _wrap_svn_wc_queue_committed3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp8 = 0 ;
   int res8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23456,7 +24497,8 @@ _wrap_svn_wc_queue_committed3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -23466,7 +24508,18 @@ _wrap_svn_wc_queue_committed3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -23502,6 +24555,7 @@ _wrap_svn_wc_queue_committed2(int argc, VALUE *argv, VALUE self) {
   int res3 = 0 ;
   void *argp8 = 0 ;
   int res8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23559,7 +24613,8 @@ _wrap_svn_wc_queue_committed2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -23569,7 +24624,18 @@ _wrap_svn_wc_queue_committed2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -23602,6 +24668,7 @@ _wrap_svn_wc_queue_committed(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23654,7 +24721,8 @@ _wrap_svn_wc_queue_committed(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, argv[0]);
@@ -23668,7 +24736,18 @@ _wrap_svn_wc_queue_committed(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -23700,6 +24779,7 @@ _wrap_svn_wc_process_committed_queue2(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val3 ;
   int ecode3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23759,7 +24839,8 @@ _wrap_svn_wc_process_committed_queue2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -23771,7 +24852,18 @@ _wrap_svn_wc_process_committed_queue2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -23800,6 +24892,7 @@ _wrap_svn_wc_process_committed_queue(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val3 ;
   int ecode3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23855,7 +24948,8 @@ _wrap_svn_wc_process_committed_queue(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     VALUE target;
@@ -23864,7 +24958,18 @@ _wrap_svn_wc_process_committed_queue(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -23899,6 +25004,7 @@ _wrap_svn_wc_process_committed4(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -23966,7 +25072,8 @@ _wrap_svn_wc_process_committed4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
@@ -23977,7 +25084,18 @@ _wrap_svn_wc_process_committed4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24012,6 +25130,7 @@ _wrap_svn_wc_process_committed3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24078,7 +25197,8 @@ _wrap_svn_wc_process_committed3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
@@ -24089,7 +25209,18 @@ _wrap_svn_wc_process_committed3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24123,6 +25254,7 @@ _wrap_svn_wc_process_committed2(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24188,7 +25320,8 @@ _wrap_svn_wc_process_committed2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24198,7 +25331,18 @@ _wrap_svn_wc_process_committed2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24231,6 +25375,7 @@ _wrap_svn_wc_process_committed(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   long val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24295,7 +25440,8 @@ _wrap_svn_wc_process_committed(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24305,7 +25451,18 @@ _wrap_svn_wc_process_committed(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24342,6 +25499,7 @@ _wrap_svn_wc_crawl_revisions5(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24397,7 +25555,8 @@ _wrap_svn_wc_crawl_revisions5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg11);
@@ -24410,7 +25569,18 @@ _wrap_svn_wc_crawl_revisions5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -24448,6 +25618,7 @@ _wrap_svn_wc_crawl_revisions4(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   void *argp12 = 0 ;
   int res12 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24504,7 +25675,8 @@ _wrap_svn_wc_crawl_revisions4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24514,7 +25686,18 @@ _wrap_svn_wc_crawl_revisions4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24551,6 +25734,7 @@ _wrap_svn_wc_crawl_revisions3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   void *argp11 = 0 ;
   int res11 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24606,7 +25790,8 @@ _wrap_svn_wc_crawl_revisions3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24616,7 +25801,18 @@ _wrap_svn_wc_crawl_revisions3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24655,6 +25851,7 @@ _wrap_svn_wc_crawl_revisions2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   void *argp10 = 0 ;
   int res10 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24712,7 +25909,8 @@ _wrap_svn_wc_crawl_revisions2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24722,7 +25920,18 @@ _wrap_svn_wc_crawl_revisions2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24762,6 +25971,7 @@ _wrap_svn_wc_crawl_revisions(int argc, VALUE *argv, VALUE self) {
   int res9 ;
   void *argp10 = 0 ;
   int res10 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24825,7 +26035,8 @@ _wrap_svn_wc_crawl_revisions(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24835,7 +26046,18 @@ _wrap_svn_wc_crawl_revisions(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -24868,6 +26090,7 @@ _wrap_svn_wc_check_root(int argc, VALUE *argv, VALUE self) {
   int res5 ;
   char *buf5 = 0 ;
   int alloc5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24907,7 +26130,8 @@ _wrap_svn_wc_check_root(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -24929,7 +26153,18 @@ _wrap_svn_wc_check_root(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -24957,6 +26192,7 @@ _wrap_svn_wc_is_wc_root2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -24994,7 +26230,8 @@ _wrap_svn_wc_is_wc_root2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -25007,7 +26244,18 @@ _wrap_svn_wc_is_wc_root2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -25035,6 +26283,7 @@ _wrap_svn_wc_is_wc_root(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25072,7 +26321,8 @@ _wrap_svn_wc_is_wc_root(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg1 ? Qtrue : Qfalse);
@@ -25085,7 +26335,18 @@ _wrap_svn_wc_is_wc_root(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -25116,6 +26377,7 @@ _wrap_svn_wc_get_actual_target2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25162,7 +26424,8 @@ _wrap_svn_wc_get_actual_target2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -25193,7 +26456,18 @@ _wrap_svn_wc_get_actual_target2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -25227,6 +26501,7 @@ _wrap_svn_wc_get_actual_target(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   char *temp2 ;
   char *temp3 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25260,7 +26535,8 @@ _wrap_svn_wc_get_actual_target(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg2) {
@@ -25284,7 +26560,18 @@ _wrap_svn_wc_get_actual_target(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -25342,6 +26629,7 @@ _wrap_svn_wc_get_update_editor4(int argc, VALUE *argv, VALUE self) {
   int res17 ;
   int res19 ;
   int res21 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25458,7 +26746,8 @@ _wrap_svn_wc_get_update_editor4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -25488,7 +26777,18 @@ _wrap_svn_wc_get_update_editor4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -25544,6 +26844,7 @@ _wrap_svn_wc_get_update_editor3(int argc, VALUE *argv, VALUE self) {
   void *temp19 ;
   void *argp20 = 0 ;
   int res20 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25631,7 +26932,8 @@ _wrap_svn_wc_get_update_editor3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -25659,7 +26961,18 @@ _wrap_svn_wc_get_update_editor3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -25700,6 +27013,7 @@ _wrap_svn_wc_get_update_editor2(int argc, VALUE *argv, VALUE self) {
   void *temp12 ;
   void *argp13 = 0 ;
   int res13 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25768,7 +27082,8 @@ _wrap_svn_wc_get_update_editor2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -25790,7 +27105,18 @@ _wrap_svn_wc_get_update_editor2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -25832,6 +27158,7 @@ _wrap_svn_wc_get_update_editor(int argc, VALUE *argv, VALUE self) {
   void *temp12 ;
   void *argp13 = 0 ;
   int res13 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -25906,7 +27233,8 @@ _wrap_svn_wc_get_update_editor(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -25928,7 +27256,18 @@ _wrap_svn_wc_get_update_editor(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -25988,6 +27327,7 @@ _wrap_svn_wc_get_switch_editor4(int argc, VALUE *argv, VALUE self) {
   int res16 ;
   int res18 ;
   int res20 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26107,7 +27447,8 @@ _wrap_svn_wc_get_switch_editor4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -26138,7 +27479,18 @@ _wrap_svn_wc_get_switch_editor4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -26197,6 +27549,7 @@ _wrap_svn_wc_get_switch_editor3(int argc, VALUE *argv, VALUE self) {
   void *temp18 ;
   void *argp19 = 0 ;
   int res19 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26281,7 +27634,8 @@ _wrap_svn_wc_get_switch_editor3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -26307,7 +27661,18 @@ _wrap_svn_wc_get_switch_editor3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -26353,6 +27718,7 @@ _wrap_svn_wc_get_switch_editor2(int argc, VALUE *argv, VALUE self) {
   void *temp13 ;
   void *argp14 = 0 ;
   int res14 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26426,7 +27792,8 @@ _wrap_svn_wc_get_switch_editor2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -26449,7 +27816,18 @@ _wrap_svn_wc_get_switch_editor2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -26496,6 +27874,7 @@ _wrap_svn_wc_get_switch_editor(int argc, VALUE *argv, VALUE self) {
   void *temp13 ;
   void *argp14 = 0 ;
   int res14 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26575,7 +27954,8 @@ _wrap_svn_wc_get_switch_editor(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, LONG2NUM((long)arg1));
@@ -26598,7 +27978,18 @@ _wrap_svn_wc_get_switch_editor(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -26628,6 +28019,7 @@ _wrap_svn_wc_prop_list2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26673,7 +28065,8 @@ _wrap_svn_wc_prop_list2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_svn_string(*arg1));
@@ -26693,7 +28086,18 @@ _wrap_svn_wc_prop_list2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -26728,6 +28132,7 @@ _wrap_svn_wc_prop_list(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26765,7 +28170,8 @@ _wrap_svn_wc_prop_list(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_svn_string(*arg1));
@@ -26778,7 +28184,18 @@ _wrap_svn_wc_prop_list(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -26807,6 +28224,7 @@ _wrap_svn_wc_get_pristine_props(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26852,7 +28270,8 @@ _wrap_svn_wc_get_pristine_props(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_svn_string(*arg1));
@@ -26872,7 +28291,18 @@ _wrap_svn_wc_get_pristine_props(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -26912,6 +28342,7 @@ _wrap_svn_wc_prop_get2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -26962,7 +28393,8 @@ _wrap_svn_wc_prop_get2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -26987,7 +28419,18 @@ _wrap_svn_wc_prop_get2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -27027,6 +28470,7 @@ _wrap_svn_wc_prop_get(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27069,7 +28513,8 @@ _wrap_svn_wc_prop_get(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -27087,7 +28532,18 @@ _wrap_svn_wc_prop_get(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27129,6 +28585,7 @@ _wrap_svn_wc_prop_set4(int argc, VALUE *argv, VALUE self) {
   svn_string_t value4 ;
   void *argp7 = 0 ;
   int res7 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27196,7 +28653,8 @@ _wrap_svn_wc_prop_set4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -27210,7 +28668,18 @@ _wrap_svn_wc_prop_set4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27246,6 +28715,7 @@ _wrap_svn_wc_prop_set3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27301,7 +28771,8 @@ _wrap_svn_wc_prop_set3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27312,7 +28783,18 @@ _wrap_svn_wc_prop_set3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27346,6 +28828,7 @@ _wrap_svn_wc_prop_set2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27397,7 +28880,8 @@ _wrap_svn_wc_prop_set2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27408,7 +28892,18 @@ _wrap_svn_wc_prop_set2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27441,6 +28936,7 @@ _wrap_svn_wc_prop_set(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27491,7 +28987,8 @@ _wrap_svn_wc_prop_set(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27502,7 +28999,18 @@ _wrap_svn_wc_prop_set(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -27637,6 +29145,7 @@ _wrap_svn_wc_canonicalize_svn_prop(int argc, VALUE *argv, VALUE self) {
   int val5 ;
   int ecode5 = 0 ;
   int res8 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27699,7 +29208,8 @@ _wrap_svn_wc_canonicalize_svn_prop(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -27717,7 +29227,18 @@ _wrap_svn_wc_canonicalize_svn_prop(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -27770,6 +29291,7 @@ _wrap_svn_wc_get_diff_editor6(int argc, VALUE *argv, VALUE self) {
   void *argp14 = 0 ;
   int res14 = 0 ;
   int res15 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27848,7 +29370,8 @@ _wrap_svn_wc_get_diff_editor6(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_delta_editor_t, 0));
@@ -27875,7 +29398,18 @@ _wrap_svn_wc_get_diff_editor6(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -27927,6 +29461,7 @@ _wrap_svn_wc_get_diff_editor5(int argc, VALUE *argv, VALUE self) {
   int res11 = 0 ;
   svn_delta_editor_t *temp12 ;
   void *temp13 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -27989,7 +29524,8 @@ _wrap_svn_wc_get_diff_editor5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -28008,7 +29544,18 @@ _wrap_svn_wc_get_diff_editor5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28049,6 +29596,7 @@ _wrap_svn_wc_get_diff_editor4(int argc, VALUE *argv, VALUE self) {
   int res11 = 0 ;
   svn_delta_editor_t *temp12 ;
   void *temp13 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28106,7 +29654,8 @@ _wrap_svn_wc_get_diff_editor4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -28125,7 +29674,18 @@ _wrap_svn_wc_get_diff_editor4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28163,6 +29723,7 @@ _wrap_svn_wc_get_diff_editor3(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   svn_delta_editor_t *temp11 ;
   void *temp12 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28213,7 +29774,8 @@ _wrap_svn_wc_get_diff_editor3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -28232,7 +29794,18 @@ _wrap_svn_wc_get_diff_editor3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28273,6 +29846,7 @@ _wrap_svn_wc_get_diff_editor2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   svn_delta_editor_t *temp11 ;
   void *temp12 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28328,7 +29902,8 @@ _wrap_svn_wc_get_diff_editor2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -28347,7 +29922,18 @@ _wrap_svn_wc_get_diff_editor2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28387,6 +29973,7 @@ _wrap_svn_wc_get_diff_editor(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   svn_delta_editor_t *temp10 ;
   void *temp11 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28441,7 +30028,8 @@ _wrap_svn_wc_get_diff_editor(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -28460,7 +30048,18 @@ _wrap_svn_wc_get_diff_editor(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28500,6 +30099,7 @@ _wrap_svn_wc_diff6(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   void *argp9 = 0 ;
   int res9 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28560,7 +30160,8 @@ _wrap_svn_wc_diff6(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg11);
@@ -28573,7 +30174,18 @@ _wrap_svn_wc_diff6(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28609,6 +30221,7 @@ _wrap_svn_wc_diff5(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   void *argp7 = 0 ;
   int res7 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28663,7 +30276,8 @@ _wrap_svn_wc_diff5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28673,7 +30287,18 @@ _wrap_svn_wc_diff5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28706,6 +30331,7 @@ _wrap_svn_wc_diff4(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp7 = 0 ;
   int res7 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28755,7 +30381,8 @@ _wrap_svn_wc_diff4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28765,7 +30392,18 @@ _wrap_svn_wc_diff4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28795,6 +30433,7 @@ _wrap_svn_wc_diff3(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28837,7 +30476,8 @@ _wrap_svn_wc_diff3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28847,7 +30487,18 @@ _wrap_svn_wc_diff3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28880,6 +30531,7 @@ _wrap_svn_wc_diff2(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -28927,7 +30579,8 @@ _wrap_svn_wc_diff2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28937,7 +30590,18 @@ _wrap_svn_wc_diff2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -28969,6 +30633,7 @@ _wrap_svn_wc_diff(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29015,7 +30680,8 @@ _wrap_svn_wc_diff(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -29025,7 +30691,18 @@ _wrap_svn_wc_diff(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -29056,6 +30733,7 @@ _wrap_svn_wc_get_prop_diffs2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29102,7 +30780,8 @@ _wrap_svn_wc_get_prop_diffs2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_prop_apr_array_to_hash_prop(*arg1));
@@ -29125,7 +30804,18 @@ _wrap_svn_wc_get_prop_diffs2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -29162,6 +30852,7 @@ _wrap_svn_wc_get_prop_diffs(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29200,7 +30891,8 @@ _wrap_svn_wc_get_prop_diffs(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_prop_apr_array_to_hash_prop(*arg1));
@@ -29216,7 +30908,18 @@ _wrap_svn_wc_get_prop_diffs(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -29288,6 +30991,7 @@ _wrap_svn_wc_merge5(int argc, VALUE *argv, VALUE self) {
   void *argp16 = 0 ;
   int res16 = 0 ;
   int res18 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29408,7 +31112,8 @@ _wrap_svn_wc_merge5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg1)));
@@ -29432,7 +31137,18 @@ _wrap_svn_wc_merge5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -29503,6 +31219,7 @@ _wrap_svn_wc_merge4(int argc, VALUE *argv, VALUE self) {
   void *argp14 = 0 ;
   int res14 = 0 ;
   int res16 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29613,7 +31330,8 @@ _wrap_svn_wc_merge4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg1)));
@@ -29637,7 +31355,18 @@ _wrap_svn_wc_merge4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
@@ -29699,6 +31428,7 @@ _wrap_svn_wc_merge3(int argc, VALUE *argv, VALUE self) {
   int alloc8 = 0 ;
   void *argp12 = 0 ;
   int res12 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29789,7 +31519,8 @@ _wrap_svn_wc_merge3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg1)));
@@ -29813,7 +31544,18 @@ _wrap_svn_wc_merge3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -29870,6 +31612,7 @@ _wrap_svn_wc_merge2(int argc, VALUE *argv, VALUE self) {
   int res8 ;
   char *buf8 = 0 ;
   int alloc8 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -29951,7 +31694,8 @@ _wrap_svn_wc_merge2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg1)));
@@ -29972,7 +31716,18 @@ _wrap_svn_wc_merge2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -30028,6 +31783,7 @@ _wrap_svn_wc_merge(int argc, VALUE *argv, VALUE self) {
   int alloc7 = 0 ;
   enum svn_wc_merge_outcome_t temp9 ;
   int res9 = SWIG_TMPOBJ ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30098,7 +31854,8 @@ _wrap_svn_wc_merge(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res9)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_int((*arg9)));
@@ -30119,7 +31876,18 @@ _wrap_svn_wc_merge(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
@@ -30167,6 +31935,7 @@ _wrap_svn_wc_merge_props3(int argc, VALUE *argv, VALUE self) {
   void *argp5 = 0 ;
   int res5 = 0 ;
   int res10 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30212,7 +31981,7 @@ _wrap_svn_wc_merge_props3(int argc, VALUE *argv, VALUE self) {
     arg6 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[5], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg6)) {
+      if (arg6 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[5], rb_pool);
@@ -30258,7 +32027,8 @@ _wrap_svn_wc_merge_props3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg12);
@@ -30271,7 +32041,18 @@ _wrap_svn_wc_merge_props3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -30306,6 +32087,7 @@ _wrap_svn_wc_merge_props2(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30341,7 +32123,7 @@ _wrap_svn_wc_merge_props2(int argc, VALUE *argv, VALUE self) {
     arg4 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[3], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg4)) {
+      if (arg4 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[3], rb_pool);
@@ -30378,7 +32160,8 @@ _wrap_svn_wc_merge_props2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -30391,7 +32174,18 @@ _wrap_svn_wc_merge_props2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30424,6 +32218,7 @@ _wrap_svn_wc_merge_props(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30459,7 +32254,7 @@ _wrap_svn_wc_merge_props(int argc, VALUE *argv, VALUE self) {
     arg4 = svn_swig_rb_hash_to_apr_hash_svn_string(argv[3], _global_pool);
     _global_pool = NULL;
     if (!NIL_P(rb_pool)) {
-      if (NIL_P(arg4)) {
+      if (arg4 == NULL) {
         svn_swig_rb_destroy_pool(rb_pool);
       } else {
         svn_swig_rb_set_pool_for_no_swig_type(argv[3], rb_pool);
@@ -30492,7 +32287,8 @@ _wrap_svn_wc_merge_props(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30502,7 +32298,18 @@ _wrap_svn_wc_merge_props(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30534,6 +32341,7 @@ _wrap_svn_wc_merge_prop_diffs(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30585,7 +32393,8 @@ _wrap_svn_wc_merge_prop_diffs(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30595,7 +32404,18 @@ _wrap_svn_wc_merge_prop_diffs(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30624,6 +32444,7 @@ _wrap_svn_wc_get_pristine_contents2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30669,7 +32490,8 @@ _wrap_svn_wc_get_pristine_contents2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_stream_t, 0));
@@ -30689,7 +32511,18 @@ _wrap_svn_wc_get_pristine_contents2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -30722,6 +32555,7 @@ _wrap_svn_wc_get_pristine_contents(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30762,7 +32596,8 @@ _wrap_svn_wc_get_pristine_contents(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_stream_t, 0));
@@ -30782,7 +32617,18 @@ _wrap_svn_wc_get_pristine_contents(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30814,6 +32660,7 @@ _wrap_svn_wc_get_pristine_copy_path(int argc, VALUE *argv, VALUE self) {
   char *buf1 = 0 ;
   int alloc1 = 0 ;
   char *temp2 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30846,7 +32693,8 @@ _wrap_svn_wc_get_pristine_copy_path(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg2) {
@@ -30863,7 +32711,18 @@ _wrap_svn_wc_get_pristine_copy_path(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -30897,6 +32756,7 @@ _wrap_svn_wc_cleanup4(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -30945,7 +32805,8 @@ _wrap_svn_wc_cleanup4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg8);
@@ -30958,7 +32819,18 @@ _wrap_svn_wc_cleanup4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -30986,6 +32858,7 @@ _wrap_svn_wc_cleanup3(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31026,7 +32899,8 @@ _wrap_svn_wc_cleanup3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -31039,7 +32913,18 @@ _wrap_svn_wc_cleanup3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -31065,6 +32950,7 @@ _wrap_svn_wc_cleanup2(int argc, VALUE *argv, VALUE self) {
   int res1 ;
   char *buf1 = 0 ;
   int alloc1 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31107,7 +32993,8 @@ _wrap_svn_wc_cleanup2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -31120,7 +33007,18 @@ _wrap_svn_wc_cleanup2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -31149,6 +33047,7 @@ _wrap_svn_wc_cleanup(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31196,7 +33095,8 @@ _wrap_svn_wc_cleanup(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg5);
@@ -31209,7 +33109,18 @@ _wrap_svn_wc_cleanup(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -31242,6 +33153,7 @@ _wrap_svn_wc_upgrade(int argc, VALUE *argv, VALUE self) {
   char *buf2 = 0 ;
   int alloc2 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31296,7 +33208,8 @@ _wrap_svn_wc_upgrade(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -31309,7 +33222,18 @@ _wrap_svn_wc_upgrade(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -31345,6 +33269,7 @@ _wrap_svn_wc_relocate4(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31395,7 +33320,8 @@ _wrap_svn_wc_relocate4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31407,7 +33333,18 @@ _wrap_svn_wc_relocate4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31446,6 +33383,7 @@ _wrap_svn_wc_relocate3(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31497,7 +33435,8 @@ _wrap_svn_wc_relocate3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31509,7 +33448,18 @@ _wrap_svn_wc_relocate3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31549,6 +33499,7 @@ _wrap_svn_wc_relocate2(int argc, VALUE *argv, VALUE self) {
   char *buf4 = 0 ;
   int alloc4 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31606,7 +33557,8 @@ _wrap_svn_wc_relocate2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31618,7 +33570,18 @@ _wrap_svn_wc_relocate2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31658,6 +33621,7 @@ _wrap_svn_wc_relocate(int argc, VALUE *argv, VALUE self) {
   char *buf4 = 0 ;
   int alloc4 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31715,7 +33679,8 @@ _wrap_svn_wc_relocate(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31727,7 +33692,18 @@ _wrap_svn_wc_relocate(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -31767,6 +33743,7 @@ _wrap_svn_wc_revert6(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31823,7 +33800,8 @@ _wrap_svn_wc_revert6(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg10);
@@ -31836,7 +33814,18 @@ _wrap_svn_wc_revert6(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -31873,6 +33862,7 @@ _wrap_svn_wc_revert5(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -31928,7 +33918,8 @@ _wrap_svn_wc_revert5(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg9);
@@ -31941,7 +33932,18 @@ _wrap_svn_wc_revert5(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -31976,6 +33978,7 @@ _wrap_svn_wc_revert4(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32029,7 +34032,8 @@ _wrap_svn_wc_revert4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -32042,7 +34046,18 @@ _wrap_svn_wc_revert4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -32077,6 +34092,7 @@ _wrap_svn_wc_revert3(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32130,7 +34146,8 @@ _wrap_svn_wc_revert3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -32143,7 +34160,18 @@ _wrap_svn_wc_revert3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -32175,6 +34203,7 @@ _wrap_svn_wc_revert2(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32221,7 +34250,8 @@ _wrap_svn_wc_revert2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -32234,7 +34264,18 @@ _wrap_svn_wc_revert2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -32267,6 +34308,7 @@ _wrap_svn_wc_revert(int argc, VALUE *argv, VALUE self) {
   void *argp2 = 0 ;
   int res2 = 0 ;
   int res8 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32319,7 +34361,8 @@ _wrap_svn_wc_revert(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg6);
@@ -32332,7 +34375,18 @@ _wrap_svn_wc_revert(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -32359,6 +34413,7 @@ _wrap_svn_wc_restore(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32396,7 +34451,8 @@ _wrap_svn_wc_restore(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -32406,7 +34462,18 @@ _wrap_svn_wc_restore(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -32436,6 +34503,7 @@ _wrap_svn_wc_create_tmp_file2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   int val4 ;
   int ecode4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32474,7 +34542,8 @@ _wrap_svn_wc_create_tmp_file2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_apr_file_t, 0));
@@ -32494,7 +34563,18 @@ _wrap_svn_wc_create_tmp_file2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -32520,6 +34600,7 @@ _wrap_svn_wc_create_tmp_file(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32553,7 +34634,8 @@ _wrap_svn_wc_create_tmp_file(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_apr_file_t, 0));
@@ -32566,7 +34648,18 @@ _wrap_svn_wc_create_tmp_file(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -32601,6 +34694,7 @@ _wrap_svn_wc_translated_file2(int argc, VALUE *argv, VALUE self) {
   int res4 = 0 ;
   unsigned long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32648,7 +34742,8 @@ _wrap_svn_wc_translated_file2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_filename_to_temp_file(*arg1));
@@ -32662,7 +34757,18 @@ _wrap_svn_wc_translated_file2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -32692,6 +34798,7 @@ _wrap_svn_wc_translated_file(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32730,7 +34837,8 @@ _wrap_svn_wc_translated_file(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -32747,7 +34855,18 @@ _wrap_svn_wc_translated_file(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -32782,6 +34901,7 @@ _wrap_svn_wc_translated_stream(int argc, VALUE *argv, VALUE self) {
   int res4 = 0 ;
   unsigned long val5 ;
   int ecode5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32829,7 +34949,8 @@ _wrap_svn_wc_translated_stream(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_stream_t, 0));
@@ -32843,7 +34964,18 @@ _wrap_svn_wc_translated_stream(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
@@ -32878,6 +35010,7 @@ _wrap_svn_wc_transmit_text_deltas3(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -32937,7 +35070,8 @@ _wrap_svn_wc_transmit_text_deltas3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_checksum_t, 0));
@@ -32960,7 +35094,18 @@ _wrap_svn_wc_transmit_text_deltas3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -33000,6 +35145,7 @@ _wrap_svn_wc_transmit_text_deltas2(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33051,7 +35197,8 @@ _wrap_svn_wc_transmit_text_deltas2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg1) {
@@ -33072,7 +35219,18 @@ _wrap_svn_wc_transmit_text_deltas2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -33103,6 +35261,7 @@ _wrap_svn_wc_transmit_text_deltas(int argc, VALUE *argv, VALUE self) {
   void *argp2 = 0 ;
   int res2 = 0 ;
   char *temp6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33153,7 +35312,8 @@ _wrap_svn_wc_transmit_text_deltas(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg6) {
@@ -33170,7 +35330,18 @@ _wrap_svn_wc_transmit_text_deltas(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -33198,6 +35369,7 @@ _wrap_svn_wc_transmit_prop_deltas2(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33246,7 +35418,8 @@ _wrap_svn_wc_transmit_prop_deltas2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33256,7 +35429,18 @@ _wrap_svn_wc_transmit_prop_deltas2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33289,6 +35473,7 @@ _wrap_svn_wc_transmit_prop_deltas(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   char *temp6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33343,7 +35528,8 @@ _wrap_svn_wc_transmit_prop_deltas(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg6) {
@@ -33360,7 +35546,18 @@ _wrap_svn_wc_transmit_prop_deltas(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -33382,6 +35579,7 @@ _wrap_svn_wc_get_default_ignores(int argc, VALUE *argv, VALUE self) {
   VALUE _global_svn_swig_rb_pool ;
   apr_pool_t *_global_pool ;
   apr_array_header_t *temp1 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33416,7 +35614,8 @@ _wrap_svn_wc_get_default_ignores(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_array_to_array_string(*arg1));
@@ -33428,7 +35627,18 @@ _wrap_svn_wc_get_default_ignores(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -33457,6 +35667,7 @@ _wrap_svn_wc_get_ignores2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33509,7 +35720,8 @@ _wrap_svn_wc_get_ignores2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_array_to_array_string(*arg1));
@@ -33529,7 +35741,18 @@ _wrap_svn_wc_get_ignores2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -33561,6 +35784,7 @@ _wrap_svn_wc_get_ignores(int argc, VALUE *argv, VALUE self) {
   apr_array_header_t *temp1 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33600,7 +35824,8 @@ _wrap_svn_wc_get_ignores(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_array_to_array_string(*arg1));
@@ -33612,7 +35837,18 @@ _wrap_svn_wc_get_ignores(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -33701,6 +35937,7 @@ _wrap_svn_wc_add_lock2(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33742,7 +35979,8 @@ _wrap_svn_wc_add_lock2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33752,7 +35990,18 @@ _wrap_svn_wc_add_lock2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33781,6 +36030,7 @@ _wrap_svn_wc_add_lock(int argc, VALUE *argv, VALUE self) {
   int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33822,7 +36072,8 @@ _wrap_svn_wc_add_lock(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -33832,7 +36083,18 @@ _wrap_svn_wc_add_lock(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -33858,6 +36120,7 @@ _wrap_svn_wc_remove_lock2(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33894,7 +36157,8 @@ _wrap_svn_wc_remove_lock2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33904,7 +36168,18 @@ _wrap_svn_wc_remove_lock2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -33930,6 +36205,7 @@ _wrap_svn_wc_remove_lock(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -33966,7 +36242,8 @@ _wrap_svn_wc_remove_lock(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -33976,7 +36253,18 @@ _wrap_svn_wc_remove_lock(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -34356,6 +36644,7 @@ _wrap_svn_wc_revision_status2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34413,7 +36702,8 @@ _wrap_svn_wc_revision_status2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_NewPointerObj(*arg1, SWIGTYPE_p_svn_wc_revision_status_t, 0));
@@ -34436,7 +36726,18 @@ _wrap_svn_wc_revision_status2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -34478,6 +36779,7 @@ _wrap_svn_wc_set_changelist2(int argc, VALUE *argv, VALUE self) {
   int alloc2 = 0 ;
   void *argp5 = 0 ;
   int res5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34533,7 +36835,8 @@ _wrap_svn_wc_set_changelist2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -34546,7 +36849,18 @@ _wrap_svn_wc_set_changelist2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -34577,6 +36891,7 @@ _wrap_svn_wc_set_changelist(int argc, VALUE *argv, VALUE self) {
   int alloc1 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34624,7 +36939,8 @@ _wrap_svn_wc_set_changelist(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg5);
@@ -34637,7 +36953,18 @@ _wrap_svn_wc_set_changelist(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc1 == SWIG_NEWOBJ) free((char*)buf1);
   {
@@ -34672,6 +36999,7 @@ _wrap_svn_wc_get_changelists(int argc, VALUE *argv, VALUE self) {
   void *argp4 = 0 ;
   int res4 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34730,7 +37058,8 @@ _wrap_svn_wc_get_changelists(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg8);
@@ -34743,7 +37072,18 @@ _wrap_svn_wc_get_changelists(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -34774,6 +37114,7 @@ _wrap_svn_wc_crop_tree2(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34821,7 +37162,8 @@ _wrap_svn_wc_crop_tree2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg5);
@@ -34834,7 +37176,18 @@ _wrap_svn_wc_crop_tree2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -34865,6 +37218,7 @@ _wrap_svn_wc_crop_tree(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34912,7 +37266,8 @@ _wrap_svn_wc_crop_tree(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg7);
@@ -34925,7 +37280,18 @@ _wrap_svn_wc_crop_tree(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -34955,6 +37321,7 @@ _wrap_svn_wc_exclude(int argc, VALUE *argv, VALUE self) {
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -34999,7 +37366,8 @@ _wrap_svn_wc_exclude(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     svn_swig_rb_set_baton(vresult, (VALUE)arg4);
@@ -35012,7 +37380,18 @@ _wrap_svn_wc_exclude(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -35043,6 +37422,7 @@ _wrap_svn_wc_read_kind2(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35082,7 +37462,8 @@ _wrap_svn_wc_read_kind2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long((*arg1)));
@@ -35098,7 +37479,18 @@ _wrap_svn_wc_read_kind2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -35128,6 +37520,7 @@ _wrap_svn_wc_read_kind(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35166,7 +37559,8 @@ _wrap_svn_wc_read_kind(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res1)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long((*arg1)));
@@ -35182,7 +37576,18 @@ _wrap_svn_wc_read_kind(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -35217,6 +37622,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_opened(int argc, VALUE *argv, VALUE sel
   long val5 ;
   int ecode5 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35264,7 +37670,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_opened(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg2 ? Qtrue : Qfalse);
@@ -35280,7 +37687,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_opened(int argc, VALUE *argv, VALUE sel
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -35342,6 +37760,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_changed(int argc, VALUE *argv, VALUE se
   void *argp13 = 0 ;
   int res13 = 0 ;
   int res14 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35436,7 +37855,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_changed(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
@@ -35453,7 +37873,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_changed(int argc, VALUE *argv, VALUE se
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -35523,6 +37954,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_added(int argc, VALUE *argv, VALUE self
   void *argp15 = 0 ;
   int res15 = 0 ;
   int res16 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35629,7 +38061,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_added(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
@@ -35646,7 +38079,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_added(int argc, VALUE *argv, VALUE self
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -35702,6 +38146,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_deleted(int argc, VALUE *argv, VALUE se
   void *argp9 = 0 ;
   int res9 = 0 ;
   int res10 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35773,7 +38218,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_deleted(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg3 ? Qtrue : Qfalse);
@@ -35790,7 +38236,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_file_deleted(int argc, VALUE *argv, VALUE se
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -35827,6 +38284,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
   char *buf4 = 0 ;
   int alloc4 = 0 ;
   int res5 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35873,7 +38331,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg3 ? Qtrue : Qfalse);
@@ -35886,7 +38345,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -35923,6 +38393,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_opened(int argc, VALUE *argv, VALUE self
   long val6 ;
   int ecode6 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -35971,7 +38442,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_opened(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg2 ? Qtrue : Qfalse);
@@ -35990,7 +38462,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_opened(int argc, VALUE *argv, VALUE self
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -36034,6 +38517,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_added(int argc, VALUE *argv, VALUE self)
   long val9 ;
   int ecode9 = 0 ;
   int res10 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36099,7 +38583,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_added(int argc, VALUE *argv, VALUE self)
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg3 ? Qtrue : Qfalse);
@@ -36118,7 +38603,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_added(int argc, VALUE *argv, VALUE self)
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   {
@@ -36156,6 +38652,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_props_changed(int argc, VALUE *argv, VAL
   void *argp7 = 0 ;
   int res7 = 0 ;
   int res8 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36216,7 +38713,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_props_changed(int argc, VALUE *argv, VAL
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg3 ? Qtrue : Qfalse);
@@ -36229,7 +38727,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_props_changed(int argc, VALUE *argv, VAL
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -36266,6 +38775,7 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_closed(int argc, VALUE *argv, VALUE self
   char *buf5 = 0 ;
   int alloc5 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36318,7 +38828,8 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_closed(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
@@ -36331,7 +38842,18 @@ _wrap_svn_wc_diff_callbacks4_invoke_dir_closed(int argc, VALUE *argv, VALUE self
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -36393,6 +38915,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_changed(int argc, VALUE *argv, VALUE se
   void *argp14 = 0 ;
   int res14 = 0 ;
   int res15 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36484,7 +39007,8 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_changed(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg5 ? Qtrue : Qfalse);
@@ -36494,7 +39018,18 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_changed(int argc, VALUE *argv, VALUE se
   if (alloc8 == SWIG_NEWOBJ) free((char*)buf8);
   if (alloc11 == SWIG_NEWOBJ) free((char*)buf11);
   if (alloc12 == SWIG_NEWOBJ) free((char*)buf12);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
@@ -36553,6 +39088,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_added(int argc, VALUE *argv, VALUE self
   void *argp14 = 0 ;
   int res14 = 0 ;
   int res15 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36644,7 +39180,8 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_added(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg5 ? Qtrue : Qfalse);
@@ -36654,7 +39191,18 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_added(int argc, VALUE *argv, VALUE self
   if (alloc8 == SWIG_NEWOBJ) free((char*)buf8);
   if (alloc11 == SWIG_NEWOBJ) free((char*)buf11);
   if (alloc12 == SWIG_NEWOBJ) free((char*)buf12);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
@@ -36703,6 +39251,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_deleted(int argc, VALUE *argv, VALUE se
   void *argp10 = 0 ;
   int res10 = 0 ;
   int res11 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36771,7 +39320,8 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_deleted(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
@@ -36781,7 +39331,18 @@ _wrap_svn_wc_diff_callbacks3_invoke_file_deleted(int argc, VALUE *argv, VALUE se
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
   if (alloc8 == SWIG_NEWOBJ) free((char*)buf8);
   if (alloc9 == SWIG_NEWOBJ) free((char*)buf9);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -36814,6 +39375,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_added(int argc, VALUE *argv, VALUE self)
   long val6 ;
   int ecode6 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36862,13 +39424,25 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_added(int argc, VALUE *argv, VALUE self)
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
   }
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   return Qnil;
@@ -36894,6 +39468,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
   char *buf5 = 0 ;
   int alloc5 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -36937,13 +39512,25 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
   }
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   return Qnil;
@@ -36973,6 +39560,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_props_changed(int argc, VALUE *argv, VAL
   void *argp7 = 0 ;
   int res7 = 0 ;
   int res8 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37029,13 +39617,25 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_props_changed(int argc, VALUE *argv, VAL
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg4 ? Qtrue : Qfalse);
   }
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   return Qnil;
@@ -37061,6 +39661,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_opened(int argc, VALUE *argv, VALUE self
   long val5 ;
   int ecode5 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37104,13 +39705,25 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_opened(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg3 ? Qtrue : Qfalse);
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -37139,6 +39752,7 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_closed(int argc, VALUE *argv, VALUE self
   char *buf6 = 0 ;
   int alloc6 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37187,13 +39801,25 @@ _wrap_svn_wc_diff_callbacks3_invoke_dir_closed(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, *arg5 ? Qtrue : Qfalse);
   }
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   return Qnil;
@@ -37246,6 +39872,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_changed(int argc, VALUE *argv, VALUE se
   void *argp13 = 0 ;
   int res13 = 0 ;
   int res14 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37336,14 +39963,26 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_changed(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
   if (alloc10 == SWIG_NEWOBJ) free((char*)buf10);
   if (alloc11 == SWIG_NEWOBJ) free((char*)buf11);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -37400,6 +40039,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_added(int argc, VALUE *argv, VALUE self
   void *argp13 = 0 ;
   int res13 = 0 ;
   int res14 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37490,14 +40130,26 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_added(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
   if (alloc10 == SWIG_NEWOBJ) free((char*)buf10);
   if (alloc11 == SWIG_NEWOBJ) free((char*)buf11);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
@@ -37544,6 +40196,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_deleted(int argc, VALUE *argv, VALUE se
   void *argp9 = 0 ;
   int res9 = 0 ;
   int res10 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37611,14 +40264,26 @@ _wrap_svn_wc_diff_callbacks2_invoke_file_deleted(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
   if (alloc8 == SWIG_NEWOBJ) free((char*)buf8);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -37649,6 +40314,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_added(int argc, VALUE *argv, VALUE self)
   long val5 ;
   int ecode5 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37696,10 +40362,22 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_added(int argc, VALUE *argv, VALUE self)
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -37723,6 +40401,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
   char *buf4 = 0 ;
   int alloc4 = 0 ;
   int res5 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37765,10 +40444,22 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_deleted(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -37796,6 +40487,7 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_props_changed(int argc, VALUE *argv, VAL
   void *argp6 = 0 ;
   int res6 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37851,10 +40543,22 @@ _wrap_svn_wc_diff_callbacks2_invoke_dir_props_changed(int argc, VALUE *argv, VAL
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -37900,6 +40604,7 @@ _wrap_svn_wc_diff_callbacks_invoke_file_changed(int argc, VALUE *argv, VALUE sel
   char *buf10 = 0 ;
   int alloc10 = 0 ;
   int res11 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -37972,14 +40677,26 @@ _wrap_svn_wc_diff_callbacks_invoke_file_changed(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc9 == SWIG_NEWOBJ) free((char*)buf9);
   if (alloc10 == SWIG_NEWOBJ) free((char*)buf10);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -38029,6 +40746,7 @@ _wrap_svn_wc_diff_callbacks_invoke_file_added(int argc, VALUE *argv, VALUE self)
   char *buf10 = 0 ;
   int alloc10 = 0 ;
   int res11 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38101,14 +40819,26 @@ _wrap_svn_wc_diff_callbacks_invoke_file_added(int argc, VALUE *argv, VALUE self)
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc9 == SWIG_NEWOBJ) free((char*)buf9);
   if (alloc10 == SWIG_NEWOBJ) free((char*)buf10);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -38152,6 +40882,7 @@ _wrap_svn_wc_diff_callbacks_invoke_file_deleted(int argc, VALUE *argv, VALUE sel
   char *buf8 = 0 ;
   int alloc8 = 0 ;
   int res9 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38214,14 +40945,26 @@ _wrap_svn_wc_diff_callbacks_invoke_file_deleted(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   if (alloc6 == SWIG_NEWOBJ) free((char*)buf6);
   if (alloc7 == SWIG_NEWOBJ) free((char*)buf7);
   if (alloc8 == SWIG_NEWOBJ) free((char*)buf8);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -38252,6 +40995,7 @@ _wrap_svn_wc_diff_callbacks_invoke_dir_added(int argc, VALUE *argv, VALUE self) 
   long val5 ;
   int ecode5 = 0 ;
   int res6 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38299,10 +41043,22 @@ _wrap_svn_wc_diff_callbacks_invoke_dir_added(int argc, VALUE *argv, VALUE self) 
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -38326,6 +41082,7 @@ _wrap_svn_wc_diff_callbacks_invoke_dir_deleted(int argc, VALUE *argv, VALUE self
   char *buf4 = 0 ;
   int alloc4 = 0 ;
   int res5 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38368,10 +41125,22 @@ _wrap_svn_wc_diff_callbacks_invoke_dir_deleted(int argc, VALUE *argv, VALUE self
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -38399,6 +41168,7 @@ _wrap_svn_wc_diff_callbacks_invoke_props_changed(int argc, VALUE *argv, VALUE se
   void *argp6 = 0 ;
   int res6 = 0 ;
   int res7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38454,10 +41224,22 @@ _wrap_svn_wc_diff_callbacks_invoke_props_changed(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -38481,6 +41263,7 @@ _wrap_svn_wc_entry_callbacks2_invoke_found_entry(int argc, VALUE *argv, VALUE se
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38526,7 +41309,8 @@ _wrap_svn_wc_entry_callbacks2_invoke_found_entry(int argc, VALUE *argv, VALUE se
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38536,7 +41320,18 @@ _wrap_svn_wc_entry_callbacks2_invoke_found_entry(int argc, VALUE *argv, VALUE se
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38567,6 +41362,7 @@ _wrap_svn_wc_entry_callbacks2_invoke_handle_error(int argc, VALUE *argv, VALUE s
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38612,7 +41408,8 @@ _wrap_svn_wc_entry_callbacks2_invoke_handle_error(int argc, VALUE *argv, VALUE s
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38622,7 +41419,18 @@ _wrap_svn_wc_entry_callbacks2_invoke_handle_error(int argc, VALUE *argv, VALUE s
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38653,6 +41461,7 @@ _wrap_svn_wc_entry_callbacks_invoke_found_entry(int argc, VALUE *argv, VALUE sel
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38698,7 +41507,8 @@ _wrap_svn_wc_entry_callbacks_invoke_found_entry(int argc, VALUE *argv, VALUE sel
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38708,7 +41518,18 @@ _wrap_svn_wc_entry_callbacks_invoke_found_entry(int argc, VALUE *argv, VALUE sel
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
   {
@@ -38739,6 +41560,7 @@ _wrap_svn_wc_invoke_external_update(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   svn_string_t value4 ;
   svn_string_t value5 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -38801,7 +41623,8 @@ _wrap_svn_wc_invoke_external_update(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -38811,7 +41634,18 @@ _wrap_svn_wc_invoke_external_update(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -38996,6 +41830,7 @@ _wrap_svn_wc_invoke_conflict_resolver_func2(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39046,7 +41881,8 @@ _wrap_svn_wc_invoke_conflict_resolver_func2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     /* FIXME: Missing argout typemap: svn_wc_invoke_conflict_resolver_func2 arg 2 (svn_wc_conflict_result_t **) */
@@ -39071,7 +41907,18 @@ _wrap_svn_wc_invoke_conflict_resolver_func2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -39104,6 +41951,7 @@ _wrap_svn_wc_invoke_conflict_resolver_func(int argc, VALUE *argv, VALUE self) {
   void *argp3 = 0 ;
   int res3 = 0 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39146,7 +41994,8 @@ _wrap_svn_wc_invoke_conflict_resolver_func(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     /* FIXME: Missing argout typemap: svn_wc_invoke_conflict_resolver_func arg 2 (svn_wc_conflict_result_t **) */
@@ -39164,7 +42013,18 @@ _wrap_svn_wc_invoke_conflict_resolver_func(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -39192,6 +42052,7 @@ _wrap_svn_wc_invoke_status_func4(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39238,7 +42099,8 @@ _wrap_svn_wc_invoke_status_func4(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -39248,7 +42110,18 @@ _wrap_svn_wc_invoke_status_func4(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -39277,6 +42150,7 @@ _wrap_svn_wc_invoke_status_func3(int argc, VALUE *argv, VALUE self) {
   int alloc3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39323,7 +42197,8 @@ _wrap_svn_wc_invoke_status_func3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -39333,7 +42208,18 @@ _wrap_svn_wc_invoke_status_func3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -39468,6 +42354,7 @@ _wrap_svn_wc_invoke_get_file(int argc, VALUE *argv, VALUE self) {
   svn_revnum_t temp6 ;
   int res6 = SWIG_TMPOBJ ;
   apr_hash_t *temp7 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39519,7 +42406,8 @@ _wrap_svn_wc_invoke_get_file(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (SWIG_IsTmpObj(res6)) {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long((*arg6)));
@@ -39538,7 +42426,18 @@ _wrap_svn_wc_invoke_get_file(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -39571,6 +42470,7 @@ _wrap_svn_wc_invoke_dirents_func(int argc, VALUE *argv, VALUE self) {
   int res5 ;
   char *buf5 = 0 ;
   int alloc5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39626,7 +42526,8 @@ _wrap_svn_wc_invoke_dirents_func(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, svn_swig_rb_apr_hash_to_hash_swig_type(*arg3,
@@ -39650,7 +42551,18 @@ _wrap_svn_wc_invoke_dirents_func(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -39683,6 +42595,7 @@ _wrap_svn_wc_invoke_canonicalize_svn_prop_get_file(int argc, VALUE *argv, VALUE 
   apr_pool_t *_global_pool ;
   svn_string_t *temp2 ;
   int res4 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39723,7 +42636,8 @@ _wrap_svn_wc_invoke_canonicalize_svn_prop_get_file(int argc, VALUE *argv, VALUE 
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg2) {
@@ -39739,7 +42653,18 @@ _wrap_svn_wc_invoke_canonicalize_svn_prop_get_file(int argc, VALUE *argv, VALUE 
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;
@@ -39769,6 +42694,7 @@ _wrap_svn_wc_invoke_upgrade_get_repos_info(int argc, VALUE *argv, VALUE self) {
   int res5 ;
   char *buf5 = 0 ;
   int alloc5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39820,7 +42746,8 @@ _wrap_svn_wc_invoke_upgrade_get_repos_info(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     if (*arg2) {
@@ -39851,7 +42778,18 @@ _wrap_svn_wc_invoke_upgrade_get_repos_info(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
   {
@@ -39889,6 +42827,7 @@ _wrap_svn_wc_invoke_relocation_validator3(int argc, VALUE *argv, VALUE self) {
   int res5 ;
   char *buf5 = 0 ;
   int alloc5 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -39942,7 +42881,8 @@ _wrap_svn_wc_invoke_relocation_validator3(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -39953,7 +42893,18 @@ _wrap_svn_wc_invoke_relocation_validator3(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   if (alloc5 == SWIG_NEWOBJ) free((char*)buf5);
@@ -39982,6 +42933,7 @@ _wrap_svn_wc_invoke_relocation_validator2(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -40031,7 +42983,8 @@ _wrap_svn_wc_invoke_relocation_validator2(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -40041,7 +42994,18 @@ _wrap_svn_wc_invoke_relocation_validator2(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   {
@@ -40065,6 +43029,7 @@ _wrap_svn_wc_invoke_relocation_validator(int argc, VALUE *argv, VALUE self) {
   int res4 ;
   char *buf4 = 0 ;
   int alloc4 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -40105,10 +43070,22 @@ _wrap_svn_wc_invoke_relocation_validator(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc4 == SWIG_NEWOBJ) free((char*)buf4);
   return Qnil;
@@ -40128,6 +43105,7 @@ _wrap_svn_changelist_invoke_receiver(int argc, VALUE *argv, VALUE self) {
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -40172,7 +43150,8 @@ _wrap_svn_changelist_invoke_receiver(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -40182,7 +43161,18 @@ _wrap_svn_changelist_invoke_receiver(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
   {
@@ -40201,6 +43191,7 @@ _wrap_svn_wc_swig_init_asp_dot_net_hack(int argc, VALUE *argv, VALUE self) {
   apr_pool_t *arg1 = (apr_pool_t *) 0 ;
   VALUE _global_svn_swig_rb_pool ;
   apr_pool_t *_global_pool ;
+  VALUE *svn_presult = NULL ;
   svn_error_t *result = 0 ;
   VALUE vresult = Qnil;
   
@@ -40227,7 +43218,8 @@ _wrap_svn_wc_swig_init_asp_dot_net_hack(int argc, VALUE *argv, VALUE self) {
       svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
       svn_swig_rb_handle_svn_error(result);
     }
-    vresult = Qnil;
+    vresult = rb_ary_new();
+    svn_presult = &vresult;
   }
   {
     VALUE target;
@@ -40236,7 +43228,18 @@ _wrap_svn_wc_swig_init_asp_dot_net_hack(int argc, VALUE *argv, VALUE self) {
     svn_swig_rb_destroy_pool(_global_svn_swig_rb_pool);
     svn_swig_rb_pop_pool(_global_svn_swig_rb_pool);
   }
-  return vresult;
+  {
+    if (TYPE(*svn_presult) == T_ARRAY) {
+      switch (rb_array_len(*svn_presult)) {
+      case 0:
+        *svn_presult = Qnil;
+        break;
+      case 1:
+        *svn_presult = rb_ary_entry(*svn_presult, 0);
+        break;
+      }
+    }
+  }    return vresult;
 fail:
   {
     VALUE target;

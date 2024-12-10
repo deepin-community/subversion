@@ -6294,11 +6294,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_initialize(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6349,8 +6371,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_create_callbacks(PyObject *SWIGUNUSEDPARM(self
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_callbacks2_t,
@@ -6360,6 +6382,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_create_callbacks(PyObject *SWIGUNUSEDPARM(self
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6454,8 +6498,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_open5(PyObject *SWIGUNUSEDPARM(self), PyObject
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_session_t,
@@ -6491,6 +6535,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_open5(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6582,8 +6648,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_open4(PyObject *SWIGUNUSEDPARM(self), PyObject
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_session_t,
@@ -6606,6 +6672,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_open4(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6694,8 +6782,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_open3(PyObject *SWIGUNUSEDPARM(self), PyObject
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_session_t,
@@ -6705,6 +6793,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_open3(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6787,8 +6897,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_open2(PyObject *SWIGUNUSEDPARM(self), PyObject
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_session_t,
@@ -6798,6 +6908,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_open2(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6887,8 +7019,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_open(PyObject *SWIGUNUSEDPARM(self), PyObject 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_session_t,
@@ -6898,6 +7030,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_open(PyObject *SWIGUNUSEDPARM(self), PyObject 
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -6959,11 +7113,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reparent(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7022,8 +7198,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_session_url(PyObject *SWIGUNUSEDPARM(self)
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -7040,6 +7216,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_session_url(PyObject *SWIGUNUSEDPARM(self)
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7104,8 +7302,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_path_relative_to_session(PyObject *SWIGUNU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -7122,6 +7320,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_path_relative_to_session(PyObject *SWIGUNU
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7186,8 +7406,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_path_relative_to_root(PyObject *SWIGUNUSED
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -7204,6 +7424,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_path_relative_to_root(PyObject *SWIGUNUSED
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7263,8 +7505,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_latest_revnum(PyObject *SWIGUNUSEDPARM(sel
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg2)));
@@ -7274,6 +7516,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_latest_revnum(PyObject *SWIGUNUSEDPARM(sel
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7336,8 +7600,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dated_revision(PyObject *SWIGUNUSEDPARM(se
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg2)));
@@ -7347,6 +7611,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dated_revision(PyObject *SWIGUNUSEDPARM(se
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7442,8 +7728,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_change_rev_prop2(PyObject *SWIGUNUSEDPARM(self
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -7459,6 +7745,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_change_rev_prop2(PyObject *SWIGUNUSEDPARM(self
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7548,11 +7856,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_change_rev_prop(PyObject *SWIGUNUSEDPARM(self)
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7619,14 +7949,36 @@ SWIGINTERN PyObject *_wrap_svn_ra_rev_proplist(PyObject *SWIGUNUSEDPARM(self), P
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_prophash_to_dict(*arg3));
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7699,8 +8051,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_rev_prop(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -7716,6 +8068,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_rev_prop(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7813,8 +8187,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor3(PyObject *SWIGUNUSEDPARM(se
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_delta_editor_t,
@@ -7830,6 +8204,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor3(PyObject *SWIGUNUSEDPARM(se
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -7918,8 +8314,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor2(PyObject *SWIGUNUSEDPARM(se
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_delta_editor_t,
@@ -7935,6 +8331,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor2(PyObject *SWIGUNUSEDPARM(se
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8023,8 +8441,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor(PyObject *SWIGUNUSEDPARM(sel
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_delta_editor_t,
@@ -8040,6 +8458,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_commit_editor(PyObject *SWIGUNUSEDPARM(sel
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8129,8 +8569,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_file(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res5)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg5)));
@@ -8143,6 +8583,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_file(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8230,8 +8692,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dir2(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_convert_hash(*arg2,
@@ -8253,6 +8715,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dir2(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8332,8 +8816,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dir(PyObject *SWIGUNUSEDPARM(self), PyObje
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_convert_hash(*arg4,
@@ -8355,6 +8839,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_dir(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8466,11 +8972,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_list(PyObject *SWIGUNUSEDPARM(self), PyObject 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8564,8 +9092,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_mergeinfo(PyObject *SWIGUNUSEDPARM(self), 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_mergeinfo_catalog_to_dict(*arg2,
@@ -8581,6 +9109,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_mergeinfo(PyObject *SWIGUNUSEDPARM(self), 
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8712,8 +9262,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update3(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -8732,6 +9282,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update3(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8844,8 +9416,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update2(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -8861,6 +9433,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update2(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -8962,8 +9556,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update(PyObject *SWIGUNUSEDPARM(self), PyOb
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter2_t,
@@ -8979,6 +9573,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_update(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9116,8 +9732,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch3(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -9136,6 +9752,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch3(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9246,8 +9884,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch2(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -9263,6 +9901,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch2(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9370,8 +10030,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch(PyObject *SWIGUNUSEDPARM(self), PyOb
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter2_t,
@@ -9387,6 +10047,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_switch(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9488,8 +10170,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_status2(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -9505,6 +10187,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_status2(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9606,8 +10310,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_status(PyObject *SWIGUNUSEDPARM(self), PyOb
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter2_t,
@@ -9623,6 +10327,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_status(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9746,8 +10472,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff3(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter3_t,
@@ -9763,6 +10489,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff3(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -9886,8 +10634,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff2(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter2_t,
@@ -9903,6 +10651,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff2(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10018,8 +10788,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff(PyObject *SWIGUNUSEDPARM(self), PyObje
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_ra_reporter2_t,
@@ -10035,6 +10805,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_do_diff(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10167,11 +10959,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_log2(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10285,11 +11099,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_log(PyObject *SWIGUNUSEDPARM(self), PyObje
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10363,8 +11199,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_check_path(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res4)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg4)));
@@ -10374,6 +11210,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_check_path(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10446,8 +11304,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_stat(PyObject *SWIGUNUSEDPARM(self), PyObject 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg4, SWIGTYPE_p_svn_dirent_t,
@@ -10457,6 +11315,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_stat(PyObject *SWIGUNUSEDPARM(self), PyObject 
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10515,8 +11395,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_uuid2(PyObject *SWIGUNUSEDPARM(self), PyOb
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -10533,6 +11413,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_uuid2(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10591,8 +11493,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_uuid(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -10609,6 +11511,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_uuid(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10667,8 +11591,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_repos_root2(PyObject *SWIGUNUSEDPARM(self)
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -10685,6 +11609,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_repos_root2(PyObject *SWIGUNUSEDPARM(self)
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10743,8 +11689,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_repos_root(PyObject *SWIGUNUSEDPARM(self),
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -10761,6 +11707,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_repos_root(PyObject *SWIGUNUSEDPARM(self),
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10844,14 +11812,36 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_locations(PyObject *SWIGUNUSEDPARM(self), 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_locationhash_to_dict(*arg2));
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -10944,11 +11934,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_location_segments(PyObject *SWIGUNUSEDPARM
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11054,11 +12066,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_file_revs2(PyObject *SWIGUNUSEDPARM(self),
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11143,11 +12177,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_file_revs(PyObject *SWIGUNUSEDPARM(self), 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11229,11 +12285,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_lock(PyObject *SWIGUNUSEDPARM(self), PyObject 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11309,11 +12387,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_unlock(PyObject *SWIGUNUSEDPARM(self), PyObjec
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11378,8 +12478,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_lock(PyObject *SWIGUNUSEDPARM(self), PyObj
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_lock_t,
@@ -11389,6 +12489,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_lock(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11461,8 +12583,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_locks2(PyObject *SWIGUNUSEDPARM(self), PyO
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_convert_hash(*arg2,
@@ -11475,6 +12597,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_locks2(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11539,8 +12683,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_locks(PyObject *SWIGUNUSEDPARM(self), PyOb
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_convert_hash(*arg2,
@@ -11553,6 +12697,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_locks(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11670,11 +12836,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_replay_range(PyObject *SWIGUNUSEDPARM(self), P
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11772,11 +12960,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_replay(PyObject *SWIGUNUSEDPARM(self), PyObjec
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11858,8 +13068,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_deleted_rev(PyObject *SWIGUNUSEDPARM(self)
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res5)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg5)));
@@ -11869,6 +13079,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_deleted_rev(PyObject *SWIGUNUSEDPARM(self)
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -11955,8 +13187,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_inherited_props(PyObject *SWIGUNUSEDPARM(s
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_propinheriteditemarray_to_dict(*arg2));
@@ -11966,6 +13198,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_inherited_props(PyObject *SWIGUNUSEDPARM(s
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -12034,8 +13288,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_has_capability(PyObject *SWIGUNUSEDPARM(self),
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
@@ -12045,6 +13299,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_has_capability(PyObject *SWIGUNUSEDPARM(self),
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -12110,11 +13386,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_print_modules(PyObject *SWIGUNUSEDPARM(self), 
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -12175,8 +13473,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_print_ra_libraries(PyObject *SWIGUNUSEDPARM(se
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -12192,6 +13490,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_print_ra_libraries(PyObject *SWIGUNUSEDPARM(se
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13385,8 +14705,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_init_ra_libs(PyObject *SWIGUNUSEDPARM(self), P
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_void,
@@ -13396,6 +14716,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_init_ra_libs(PyObject *SWIGUNUSEDPARM(self), P
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13462,8 +14804,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_ra_library(PyObject *SWIGUNUSEDPARM(self),
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg1, SWIGTYPE_p_svn_ra_plugin_t,
@@ -13473,6 +14815,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_get_ra_library(PyObject *SWIGUNUSEDPARM(self),
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13581,11 +14945,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter3_invoke_set_path(PyObject *SWIGUNUSED
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13657,11 +15043,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter3_invoke_delete_path(PyObject *SWIGUNU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13769,11 +15177,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter3_invoke_link_path(PyObject *SWIGUNUSE
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13839,11 +15269,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter3_invoke_finish_report(PyObject *SWIGU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -13909,11 +15361,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter3_invoke_abort_report(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14007,11 +15481,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter2_invoke_set_path(PyObject *SWIGUNUSED
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14083,11 +15579,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter2_invoke_delete_path(PyObject *SWIGUNU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14187,11 +15705,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter2_invoke_link_path(PyObject *SWIGUNUSE
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14257,11 +15797,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter2_invoke_finish_report(PyObject *SWIGU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14327,11 +15889,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter2_invoke_abort_report(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14419,11 +16003,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter_invoke_set_path(PyObject *SWIGUNUSEDP
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14495,11 +16101,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter_invoke_delete_path(PyObject *SWIGUNUS
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14593,11 +16221,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter_invoke_link_path(PyObject *SWIGUNUSED
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14663,11 +16313,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter_invoke_finish_report(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14733,11 +16405,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_reporter_invoke_abort_report(PyObject *SWIGUNU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14806,8 +16500,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_callbacks2_invoke_open_tmp_file(PyObject *SWIG
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_apr_file_t,
@@ -14817,6 +16511,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_callbacks2_invoke_open_tmp_file(PyObject *SWIG
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14885,8 +16601,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_callbacks_invoke_open_tmp_file(PyObject *SWIGU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_apr_file_t,
@@ -14896,6 +16612,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_callbacks_invoke_open_tmp_file(PyObject *SWIGU
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -14993,8 +16731,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_open(PyObject *SWIGUNUSEDPARM(se
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_void,
@@ -15004,6 +16742,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_open(PyObject *SWIGUNUSEDPARM(se
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15073,8 +16833,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_latest_revnum(PyObject *SWIG
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res3)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg3)));
@@ -15084,6 +16844,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_latest_revnum(PyObject *SWIG
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15156,8 +16938,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_dated_revision(PyObject *SWI
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res3)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg3)));
@@ -15167,6 +16949,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_dated_revision(PyObject *SWI
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15266,11 +17070,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_change_rev_prop(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15347,14 +17173,36 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_rev_proplist(PyObject *SWIGUNUSE
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_prophash_to_dict(*arg4));
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15437,8 +17285,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_rev_prop(PyObject *SWIGUNUSEDPAR
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -15454,6 +17302,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_rev_prop(PyObject *SWIGUNUSEDPAR
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15538,8 +17408,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_commit_editor(PyObject *SWIG
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_delta_editor_t,
@@ -15555,6 +17425,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_commit_editor(PyObject *SWIG
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15654,8 +17546,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_file(PyObject *SWIGUNUSEDPAR
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res6)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg6)));
@@ -15668,6 +17560,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_file(PyObject *SWIGUNUSEDPAR
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15757,8 +17671,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_dir(PyObject *SWIGUNUSEDPARM
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_convert_hash(*arg5,
@@ -15780,6 +17694,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_dir(PyObject *SWIGUNUSEDPARM
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -15891,8 +17827,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_update(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_ra_reporter_t,
@@ -15908,6 +17844,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_update(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16025,8 +17983,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_switch(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_ra_reporter_t,
@@ -16042,6 +18000,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_switch(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16153,8 +18133,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_status(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_ra_reporter_t,
@@ -16170,6 +18150,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_status(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16295,8 +18297,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_diff(PyObject *SWIGUNUSEDPARM
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_ra_reporter_t,
@@ -16312,6 +18314,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_do_diff(PyObject *SWIGUNUSEDPARM
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16427,11 +18451,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_log(PyObject *SWIGUNUSEDPARM
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16515,8 +18561,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_check_path(PyObject *SWIGUNUSEDP
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res5)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg5)));
@@ -16526,6 +18572,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_check_path(PyObject *SWIGUNUSEDP
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16594,8 +18662,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_uuid(PyObject *SWIGUNUSEDPAR
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -16612,6 +18680,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_uuid(PyObject *SWIGUNUSEDPAR
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16680,8 +18770,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_repos_root(PyObject *SWIGUNU
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -16698,6 +18788,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_repos_root(PyObject *SWIGUNU
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16791,14 +18903,36 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_locations(PyObject *SWIGUNUS
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_locationhash_to_dict(*arg3));
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -16893,11 +19027,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_plugin_invoke_get_file_revs(PyObject *SWIGUNUS
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17009,8 +19165,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_wc_prop_func(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -17026,6 +19182,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_wc_prop_func(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17125,11 +19303,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_set_wc_prop_func(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17229,11 +19429,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_push_wc_prop_func(PyObject *SWIGUNUSEDP
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17313,11 +19535,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_invalidate_wc_props_func(PyObject *SWIG
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17396,8 +19640,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_wc_contents_func(PyObject *SWIGUNUS
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg3, SWIGTYPE_p_svn_stream_t,
@@ -17407,6 +19651,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_wc_contents_func(PyObject *SWIGUNUS
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17462,14 +19728,36 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_latest_revnum_func(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   if (SWIG_IsTmpObj(res3)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long((*arg3)));
   } else {
     int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_long, new_flags));
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17537,8 +19825,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_client_string_func(PyObject *SWIGUN
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     PyObject *s;
@@ -17555,6 +19843,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_get_client_string_func(PyObject *SWIGUN
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17666,8 +19976,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_file_rev_handler(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(arg6, SWIGTYPE_p_p_f_p_svn_txdelta_window_t_p_void__p_svn_error_t,
@@ -17683,6 +19993,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_file_rev_handler(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17780,11 +20112,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_lock_callback(PyObject *SWIGUNUSEDPARM(
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -17941,8 +20295,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_replay_revstart_callback(PyObject *SWIG
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg4, SWIGTYPE_p_svn_delta_editor_t,
@@ -17958,6 +20312,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_replay_revstart_callback(PyObject *SWIG
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -18059,11 +20435,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_replay_revfinish_callback(PyObject *SWI
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -18279,8 +20677,8 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_open_tunnel_func(PyObject *SWIGUNUSEDPA
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, svn_swig_py_new_pointer_obj(*arg2, SWIGTYPE_p_svn_stream_t,
@@ -18311,6 +20709,28 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_open_tunnel_func(PyObject *SWIGUNUSEDPA
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:
@@ -18393,11 +20813,33 @@ SWIGINTERN PyObject *_wrap_svn_ra_invoke_init_func(PyObject *SWIGUNUSEDPARM(self
       svn_error_clear(result);
       SWIG_fail;
     }
-    Py_INCREF(Py_None);
-    resultobj = Py_None;
+    Py_XDECREF(resultobj);
+    resultobj = PyList_New(0);
   }
   {
     Py_XDECREF(_global_py_pool);
+  }
+  {
+    if (resultobj == NULL) {
+      resultobj = Py_None;
+      Py_INCREF(resultobj);
+    }
+    else {
+      switch (PyList_Size(resultobj)) {
+      case 0:
+        resultobj = Py_None;
+        Py_INCREF(resultobj);
+        break;
+      case 1:
+        {
+          PyObject *tmp = resultobj;
+          resultobj = PyList_GetItem(tmp, 0);
+          Py_INCREF(resultobj);
+          Py_DECREF(tmp);
+        }
+        break;
+      }
+    }
   }
   return resultobj;
 fail:

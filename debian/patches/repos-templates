@@ -12,7 +12,7 @@ hooks, not just use them in place.
  1 file changed, 18 insertions(+), 10 deletions(-)
 
 diff --git a/subversion/libsvn_repos/repos.c b/subversion/libsvn_repos/repos.c
-index 2189de8..df87652 100644
+index 119f04b..7da0c06 100644
 --- a/subversion/libsvn_repos/repos.c
 +++ b/subversion/libsvn_repos/repos.c
 @@ -276,7 +276,7 @@ create_locks(svn_repos_t *repos, apr_pool_t *pool)

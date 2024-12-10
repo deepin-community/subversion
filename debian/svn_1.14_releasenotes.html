@@ -4,7 +4,7 @@
 <head>
 <title>Apache Subversion 1.14 LTS Release Notes</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<base href="https://subversion.apache.org"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style type="text/css">
   @import url("/style/site.css");
 </style>
@@ -12,25 +12,24 @@
 
 <body>
 <div id="site-banner">
-<div style="float: right; width: 379px; height: 80px; font-style: italic; 
-            text-align: center;">
+<div style="font-style: italic; 
+            text-align: center;" id="site-banner-apachelogo">
   <a href="https://www.apache.org/"
-  ><img src="/images/apache-logo.png"
+  ><img src="/images/asf_logo_wide.svg"
         alt="Apache Software Foundation" /></a>
 </div>
 <a href="/">
-  <img src="/images/svn-square.jpg"
-       alt="[S]"
-       style="width: 80px; height: 80px;"/>
-  <img src="/images/svn-name-banner.jpg"
-       alt="Subversion"
-       style="width: 320px; height: 80px;"/></a>
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt="[S] Subversion"
+       id="site-banner-svnlogo" /></a>
 </div> <!-- #site-banner -->
 
 <div id="site-nav">
-<div id="site-nav-menu">
-<ul>
-  <li>About Subversion
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
     <ul>
       <li><a href="/news.html">News</a></li>
       <li><a href="/features.html">Features</a></li>
@@ -39,22 +38,17 @@
       <li><a href="/roadmap.html">Roadmap</a></li>
       <li><a href="/security/">Security</a></li>
       <li><a href="/quick-start">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
-  </li>
-  <li>Getting Subversion
+  </p>
+  <p>Getting Subversion
       <ul>
-      <!-- A parameter in the form '?update=YYYYMMDDhhmm' may
-           be appended to 'download.cgi' to only offer mirrors that have
-           synced after the specified date. We update it after a security
-           release when the email announcement is less than 24 hours after
-           the upload to /dist/release, in order to prevent offering mirrors
-           that don't carry the just-released artifacts. -->
       <li><a href="/packages.html">Binary Packages</a></li>
       <li><a href="/download.cgi">Source Download</a></li>
       <li><a href="/docs/release-notes/">Release Notes</a></li>
     </ul>
-  </li>
-  <li>Community
+  </p>
+  <p>Community
     <ul>
       <li><a href="/mailing-lists.html">Mailing Lists</a></li>
       <li><a href="/reporting-issues.html">Reporting Issues</a></li>
@@ -62,21 +56,19 @@
       <li><a href="/contributing.html">Getting Involved</a></li>
       <li><a href="/source-code.html">Source Code</a></li>
     </ul>
-  </li>
-  <li>About the <acronym title="Apache Software Foundation">ASF</acronym>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
     <ul>
       <li><a class="linkaway"
-             href="https://www.apache.org/licenses/">Licenses</a></li>
+             href="https://www.apache.org/licenses/">License</a></li>
       <li><a class="linkaway"
              href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
       <li><a class="linkaway"
              href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
     </ul>
-  </li>
-</ul>
-</div> <!-- #site-nav-menu -->
+  </p>
 
-<div id="site-search">
+<p id="site-search">
   <form action="https://www.google.com/search" method="get"
         style="margin-top: 10px; margin-bottom: 10px; display: inline;">
   <div style="display: inline;">
@@ -87,26 +79,28 @@
     <input name="Search" value="Go" type="submit"/>
   </div>
   </form>
-</div> <!-- #site-search -->
+</p> <!-- #site-search -->
 
-<div id="site-svnbook-block">
+<p id="site-svnbook-block">
 <p>Read the official Subversion
-   documentation <a href="http://svnbook.org" class="linkaway">online</a>!</p>
-<p><a href="http://svnbook.org/"
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
       ><img src="/images/svnbook-cover.jpg"
             alt="Version Control With Subversion"/></a></p>
-</div> <!-- #site-svnbook-block -->
+</p> <!-- #site-svnbook-block -->
 
-<div id="copyright">
-<p>Copyright &#169; 2018 <a href="https://www.apache.org/">The Apache
+<p id="copyright">
+<p>Copyright &#169; 2023 <a href="https://www.apache.org/" class="nopadding">The Apache
    Software Foundation</a>, Licensed under
-   the <a href="https://www.apache.org/licenses/LICENSE-2.0" >Apache
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
    License, Version 2.0</a>.  Apache, Apache Subversion, and
    the Apache feather logo are trademarks of The Apache Software
    Foundation.  Subversion and the Apache Subversion logo are
    registered trademarks of The Apache Software Foundation.</p>
-</div> <!-- #copyright -->
-
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
 </div> <!-- #site-nav -->
 
 <div id="site-content">
@@ -183,7 +177,7 @@ available unless both client and server are the latest version.  There are
 also cases where a new feature will work but will run less efficiently if
 the client is new and the server old.</p>
 
-<p>There is <strong>no need</strong> to <a href="http://svnbook.red-bean.com/en/1.8/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin"
+<p>There is <strong>no need</strong> to <a href="https://svnbook.red-bean.com/en/1.8/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin"
 >dump and reload</a> your repositories.
 Subversion 1.14 servers can read and write to repositories created by
 earlier versions.  To upgrade an existing server installation, just install the
@@ -328,7 +322,7 @@ users.  We'll cover those in this section.</p>
 
 <p>A fix for <a href="https://issues.apache.org/jira/browse/SVN-4762?issueNumber=4762"
 >Issue #4762</a> may change the way path-based authorization rules are applied
-in some circumstances. See <a href="http://svn.apache.org/r1882326">r1882326</a>.</p>
+in some circumstances. See <a href="https://svn.apache.org/r1882326">r1882326</a>.</p>
 
 <p>Background: Subversion 1.10 introduced a new implementation of path-based
 authorization (authz) to deliver wildcard support and improved performance
@@ -430,7 +424,7 @@ but excluding FSFS indexes. For example:</p>
             1337 bytes in revision 1
 </pre>
 
-<p>(See <a href="http://svn.apache.org/r1857624">r1857624</a>.)</p>
+<p>(See <a href="https://svn.apache.org/r1857624">r1857624</a>.)</p>
 </div> <!-- svnadmin-rev-size -->
 
 <div class="h3" id="svnadmin-build-repcache">
@@ -455,7 +449,7 @@ committed while the feature was disabled.</p>
 <p>Subversion 1.14 introduces a new <tt>svnadmin build-repcache</tt>
 subcommand, which administrators can use to populate any missing entries in
 the rep-cache database for a specified revision range (or all revisions). (See
-<a href="http://svn.apache.org/r1875921">r1875921</a>.)</p>
+<a href="https://svn.apache.org/r1875921">r1875921</a>.)</p>
 
 <p>For example, to process revisions 20 through 25, inclusive, and ensure that
 their data is known to the rep-cache:</p>
@@ -508,7 +502,7 @@ process all revisions.</p>
 
 <p><tt>svn log --quiet </tt> and <tt>--diff </tt> options are no longer
 mutually exclusive. This makes it easier to display only the differences
-in a range of revisions. (See <a href="http://svn.apache.org/r1871916">r1871916</a>.)</p>
+in a range of revisions. (See <a href="https://svn.apache.org/r1871916">r1871916</a>.)</p>
 
 </div> <!-- log-quiet-diff -->
 
@@ -519,7 +513,7 @@ in a range of revisions. (See <a href="http://svn.apache.org/r1871916">r1871916<
 </h4>
 
 <p>New <tt>changelist </tt> argument to <tt>svn info --show-item </tt>
-(<a href="http://svn.apache.org/r1869481">r1869481</a>).</p>
+(<a href="https://svn.apache.org/r1869481">r1869481</a>).</p>
 
 </div> <!-- info-show-item-changelist -->
 
@@ -534,9 +528,9 @@ resolution, Subversion now performs escaping of any special characters in the
 pathname of the file to be edited. This corrects a problem that would occur
 previously when the file to be edited (and/or the path leading to it)
 contained spaces or other special characters. (See
-<a href="http://svn.apache.org/r1874057">r1874057</a>,
-<a href="http://svn.apache.org/r1874093">r1874093</a>, and
-<a href="http://svn.apache.org/r1875230">r1875230</a>.)</p>
+<a href="https://svn.apache.org/r1874057">r1874057</a>,
+<a href="https://svn.apache.org/r1874093">r1874093</a>, and
+<a href="https://svn.apache.org/r1875230">r1875230</a>.)</p>
 
 <p>Note that escaping is performed only on the pathname argument. As before,
 the editor itself is invoked through the shell and the user must properly
@@ -714,7 +708,7 @@ Subversion 1.11 and 1.12 have been backported to the
 
 <p>This change was first introduced in 1.11.</p>
 
-<p>Add '<tt>schedule</tt>' and '<tt>depth</tt>' items to '<tt>svn info --show-item</tt>' (<a href="http://svn.apache.org/r1827032">r1827032</a>).</p>
+<p>Add '<tt>schedule</tt>' and '<tt>depth</tt>' items to '<tt>svn info --show-item</tt>' (<a href="https://svn.apache.org/r1827032">r1827032</a>).</p>
 
 </div> <!-- info-show-item -->
 
@@ -726,7 +720,7 @@ Subversion 1.11 and 1.12 have been backported to the
 
 <p>This change was first introduced in 1.11.</p>
 
-<p>Allow the client cert password to be saved (<a href="http://svn.apache.org/r1836762">r1836762</a>).</p>
+<p>Allow the client cert password to be saved (<a href="https://svn.apache.org/r1836762">r1836762</a>).</p>
 
 </div> <!-- save-client-cert-pw -->
 
@@ -756,7 +750,7 @@ To show experimental commands, use <tt>svn help -v</tt> or
 now perform more quickly as a result of reduced I/O. This is achieved by
 disabling SQLite's WAL (write-ahead logging) feature, which Subversion does
 not use, but which introduces more I/O when left enabled.
-(See <a href="http://svn.apache.org/r1865523">r1865523</a>.)</p>
+(See <a href="https://svn.apache.org/r1865523">r1865523</a>.)</p>
 
 </div> <!-- sqlite-omit-wal -->
 
@@ -807,7 +801,7 @@ a warning if it detects empty group definitions.</p>
 <p>Add a hint about a possible mod_dav_svn misconfiguration: When warning
 about an overlapping configuration, if two configuration blocks are for the
 same URL, then hint that the problem may be including the same configuration
-twice. (See <a href="http://svn.apache.org/r1866738">r1866738</a>.)</p>
+twice. (See <a href="https://svn.apache.org/r1866738">r1866738</a>.)</p>
 
 </div> <!-- mod-dav-svn-twice-hint -->
 
@@ -1045,7 +1039,7 @@ of Subversion's dependencies, see the
 <p>Subversion's SWIG Python bindings can be built with SWIG 4 on Python 3.
 The bindings can be built with SWIG 3.x on Python 3 as well (the
 <tt>-modern</tt> argument to SWIG is automatically used). (See
-<a href="http://svn.apache.org/r1869853">r1869853</a>.)</p>
+<a href="https://svn.apache.org/r1869853">r1869853</a>.)</p>
 
 </div>  <!-- swig4-on-py3 -->
 
@@ -1153,8 +1147,8 @@ feature.</p>
 <p>Because shelving is a work-in-progress, the shelving CLI is disabled by
 default. Users who wish to experiment with shelving should enable one of the
 two available shelving CLI implementations by setting an environment variable
-(see <a href="http://svn.apache.org/r1875037">r1875037</a> and
-<a href="http://svn.apache.org/r1875039">r1875039</a>.)</p>
+(see <a href="https://svn.apache.org/r1875037">r1875037</a> and
+<a href="https://svn.apache.org/r1875039">r1875039</a>.)</p>
 
 <p>The two implementations are "Shelving-v2" as introduced in 1.11, and
 "Shelving-v3" as introduced in 1.12. These are incompatible with each other,
@@ -1401,7 +1395,7 @@ compared with its parent directory. This information is sometimes referred
 to as the shape or the layout of a WC.</p>
 
 <p>'<tt>svn info --x-viewspec=classic</tt>' writes in the format used by the old script
-<a href="http://svn.apache.org/viewvc/subversion/trunk/tools/client-side/svn-viewspec.py">tools/client-side/svn-viewspec.py</a>.</p>
+<a href="https://svn.apache.org/viewvc/subversion/trunk/tools/client-side/svn-viewspec.py">tools/client-side/svn-viewspec.py</a>.</p>
 
 <p>'<tt>svn info --x-viewspec=svn11</tt>' writes a series of '<tt>svn</tt>'
 command lines. You can create a new WC of the same layout by running these
@@ -1487,14 +1481,14 @@ backslashes used in Windows pathnames, and handling of UTF-8 character
 sequences.</p>
 
 <p>Most of these issues are corrected in 1.14.1. See
-<a href="http://svn.apache.org/r1876707">r1876707</a>,
-<a href="http://svn.apache.org/r1876734">r1876734</a>,
-<a href="http://svn.apache.org/r1877318">r1877318</a>,
-<a href="http://svn.apache.org/r1877712">r1877712</a>,
-<a href="http://svn.apache.org/r1878141">r1878141</a>,
-<a href="http://svn.apache.org/r1878142">r1878142</a>,
-<a href="http://svn.apache.org/r1878143">r1878143</a>, and
-<a href="http://svn.apache.org/r1878144">r1878144</a>.</p>
+<a href="https://svn.apache.org/r1876707">r1876707</a>,
+<a href="https://svn.apache.org/r1876734">r1876734</a>,
+<a href="https://svn.apache.org/r1877318">r1877318</a>,
+<a href="https://svn.apache.org/r1877712">r1877712</a>,
+<a href="https://svn.apache.org/r1878141">r1878141</a>,
+<a href="https://svn.apache.org/r1878142">r1878142</a>,
+<a href="https://svn.apache.org/r1878143">r1878143</a>, and
+<a href="https://svn.apache.org/r1878144">r1878144</a>.</p>
 
 </div> <!-- issues-py3-testsuite-windows -->
 
@@ -1543,7 +1537,7 @@ described in <a href="https://stackoverflow.com/questions/52373180/python-on-win
 </ul>
 
 <p>This issue is fixed as of Subversion 1.14.1. See
-<a href="http://svn.apache.org/r1883337">r1883337</a>.</p>
+<a href="https://svn.apache.org/r1883337">r1883337</a>.</p>
 
 </div> <!-- issues-py3-windows-os-dup -->
 
@@ -1564,7 +1558,7 @@ included with the release.</p>
 <p>For this situation, a workaround is available as of 1.14.1: pass the
 <tt>--without-swig</tt> option to <tt>configure</tt>.</p>
 
-<p>See <a href="http://svn.apache.org/r1876662">r1876662</a>.</p>
+<p>See <a href="https://svn.apache.org/r1876662">r1876662</a>.</p>
 
 <p>The workaround does not apply in the following situations:</p>
 
@@ -1584,6 +1578,14 @@ included with the release.</p>
     later are not supported for Python 2.)</li>
   <li>To target Python 3: SWIG 3.0.10 or later.</li>
 </ul>
+
+<p>This issue is fixed as of Subversion 1.14.3, and <tt>--with-swig</tt> and
+<tt>--without-swig</tt> for the <tt>configure</tt> script in the Subversion
+release tarballs are not supported any more.  See
+<a href="https://svn.apache.org/r1878379">r1878379</a>,
+<a href="https://svn.apache.org/r1883719">r1883719</a>,
+<a href="https://svn.apache.org/r1883722">r1883722</a>, and
+<a href="https://svn.apache.org/r1884610">r1884610</a>.</p>
 
 </div> <!-- issues-building-without-swig -->
 
@@ -1622,16 +1624,16 @@ patch into their swig-3.0.8 packages.)</p>
 
 <p>A crash is known to manifest when Subversion is built with GCC 10. The
 failure is detected by the test suite. This issue is fixed as of 1.14.1. See
-<a href="http://svn.apache.org/r1880886">r1880886</a>.</p>
+<a href="https://svn.apache.org/r1880886">r1880886</a>.</p>
 
 <p>A crash is known to occur when using JDK14. The failure is detected by the
 test suite. This issue is fixed as of 1.14.1. See
-<a href="http://svn.apache.org/r1882115">r1882115</a>.</p>
+<a href="https://svn.apache.org/r1882115">r1882115</a>.</p>
 
 <p>Several potential crashes in JavaHL TunnelAgent are known which are related
 to exception handling cleanup and garbage-collected Java objects. As of
 1.14.1, new regression tests are introduced to detect these failures and the
-issues have been fixed. See <a href="http://svn.apache.org/r1886029"
+issues have been fixed. See <a href="https://svn.apache.org/r1886029"
 >r1886029</a>.</p>
 
 </p>
@@ -1654,10 +1656,10 @@ svn: E155023: Can't set properties on '...': invalid status for updating propert
 (See <a href="https://issues.apache.org/jira/browse/SVN-4859">issue #4859</a>.)
 
 <p>This issue is fixed as of Subversion 1.14.1. See
-<a href="http://svn.apache.org/r1878997">r1878997</a>,
-<a href="http://svn.apache.org/r1879192">r1879192</a>,
-<a href="http://svn.apache.org/r1879474">r1879474</a>, and
-<a href="http://svn.apache.org/r1879959">r1879959</a>.</p>
+<a href="https://svn.apache.org/r1878997">r1878997</a>,
+<a href="https://svn.apache.org/r1879192">r1879192</a>,
+<a href="https://svn.apache.org/r1879474">r1879474</a>, and
+<a href="https://svn.apache.org/r1879959">r1879959</a>.</p>
 
 </div> <!-- issues-mergeinfo-issue-4859 -->
 
@@ -1681,9 +1683,9 @@ abort with an assertion failure:</p>
 </pre>
 
 <p>This issue is fixed as of Subversion 1.14.1. See
-<a href="http://svn.apache.org/r1878909">r1878909</a>,
-<a href="http://svn.apache.org/r1878918">r1878918</a>, and
-<a href="http://svn.apache.org/r1878950">r1878950</a>.</p>
+<a href="https://svn.apache.org/r1878909">r1878909</a>,
+<a href="https://svn.apache.org/r1878918">r1878918</a>, and
+<a href="https://svn.apache.org/r1878950">r1878950</a>.</p>
 
 </div> <!-- issues-filesizes-human-readable -->
 
@@ -1700,7 +1702,7 @@ per-repository rule would apply by itself.</p>
 
 <p>This issue is fixed as of 1.14.1. See <a
 href="https://issues.apache.org/jira/browse/SVN-4762?issueNumber=4762"
->Issue #4762</a> and <a href="http://svn.apache.org/r1882326">r1882326</a>.</p>
+>Issue #4762</a> and <a href="https://svn.apache.org/r1882326">r1882326</a>.</p>
 
 <p>See the section <a href="#compat-misc-authz"
 >Path-based authorization compatibility</a> for compatibility notes relating
@@ -1723,7 +1725,7 @@ string literals.</p>
 
 <p>This issue is fixed in Subversion 1.14.1.</p>
 
-<p>See <a href="http://svn.apache.org/r1879198">r1879198</a>.</p>
+<p>See <a href="https://svn.apache.org/r1879198">r1879198</a>.</p>
 
 </div> <!-- issues-sqlite-dqs -->
 
@@ -1743,7 +1745,7 @@ string literals.</p>
 
 <p>In 1.14.0, several variable declarations in mid-block were reported to
 prevent building Subversion with VC9 (Visual Studio 2008). This issue is fixed
-as of 1.14.1. See <a href="http://svn.apache.org/r1877259">r1877259</a>.</p>
+as of 1.14.1. See <a href="https://svn.apache.org/r1877259">r1877259</a>.</p>
 
 </div> <!-- issues-other-c90compat -->
 
@@ -1757,10 +1759,30 @@ as of 1.14.1. See <a href="http://svn.apache.org/r1877259">r1877259</a>.</p>
 <a href="https://apr.apache.org">APR</a> to 1.5. By request to support
 building Subversion on older operating system distributions such as CentOS 7,
 Subversion 1.14.1 restores support for building with APR 1.4 or newer. See
-<a href="http://svn.apache.org/r1881958">r1881958</a> and
-<a href="http://svn.apache.org/r1882128">r1882128</a>.</p>
+<a href="https://svn.apache.org/r1881958">r1881958</a> and
+<a href="https://svn.apache.org/r1882128">r1882128</a>.</p>
 
 </div> <!-- issues-other-apr-1-4 -->
+
+<div class="h4" id="issues-other-sqlite-3-36">
+<h4>Error building with SQLite 3.36
+  <a class="sectionlink" href="#issues-other-sqlite-3-36"
+     title="Link to this section">&para;</a>
+</h4>
+
+<p>Building Subversion with SQLite 3.36 on Unix-like systems may fail with an
+undefined reference to unixFcntlExternalReader:</p>
+
+<pre>/usr/bin/ld: .libs/sqlite3wrapper.o: in function `unixFileControl':
+subversion-1.14.1/sqlite-amalgamation/sqlite3.c:38131: undefined reference to `unixFcntlExternalReader'
+collect2: error: ld returned 1 exit status
+make: *** [build-outputs.mk:530: subversion/libsvn_subr/libsvn_subr-1.la] Error 1
+</pre>
+
+<p>This appears to be caused by a bug in SQLite 3.36 only. Subversion builds
+successfully with other versions of SQLite, such as SQLite 3.35 and 3.37.</p>
+
+</div> <!-- issues-other-sqlite-3-36 -->
 
 </div>  <!-- issues-other -->
 
@@ -1874,7 +1896,7 @@ anything you imagine.</p>
 <a href="https://subversion.apache.org/mailing-lists.html">
 https://subversion.apache.org/mailing-lists.html</a></p>
 
-<p>Or by IRC at irc.freenode.net:</p>
+<p>Or by IRC at irc.libera.chat:</p>
 <ul>
   <li>#svn channel: User chat and help using Subversion</li>
   <li>#svn-dev channel: Get involved in development!</li>
