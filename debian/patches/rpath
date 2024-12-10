@@ -13,7 +13,7 @@ patch by David Kimdon <dwhedon@debian.org>.  The basic theory is:
  2 files changed, 4 insertions(+), 3 deletions(-)
 
 diff --git a/build.conf b/build.conf
-index c0a3ee2..d025225 100644
+index a478214..d1d09cd 100644
 --- a/build.conf
 +++ b/build.conf
 @@ -573,7 +573,7 @@ lang = python

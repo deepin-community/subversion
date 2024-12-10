@@ -45,7 +45,7 @@ index 7f0a37d..49f7351 100644
  
  extraclean-swig-rb: clean-swig-rb
 diff --git a/build.conf b/build.conf
-index 95875a7..c0a3ee2 100644
+index 6981982..a478214 100644
 --- a/build.conf
 +++ b/build.conf
 @@ -190,7 +190,7 @@ path = subversion/svnserve

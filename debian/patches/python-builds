@@ -26,7 +26,7 @@ index 3e5b392..5340eb0 100644
  SWIG_PY_COMPILE = @SWIG_PY_COMPILE@
  SWIG_PY_LINK = @SWIG_PY_LINK@
 diff --git a/build.conf b/build.conf
-index d025225..f326305 100644
+index d1d09cd..d1a5748 100644
 --- a/build.conf
 +++ b/build.conf
 @@ -499,7 +499,7 @@ external-project = svn_locale
