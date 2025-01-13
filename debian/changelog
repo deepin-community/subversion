@@ -1,3 +1,10 @@
+subversion (1.14.5-2) unstable; urgency=medium
+
+  * Add salsa-ci config
+  * Run davautocheck as part of the build time tests
+
+ -- James McCoy <jamessan@debian.org>  Fri, 03 Jan 2025 21:05:20 -0500
+
 subversion (1.14.5-1) unstable; urgency=medium
 
   * Update to new upstream version 1.14.5.

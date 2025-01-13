@@ -2,38 +2,43 @@ Source: subversion
 Section: vcs
 Priority: optional
 Maintainer: James McCoy <jamessan@debian.org>
-Build-Depends: autoconf,
-               bash-completion,
-               chrpath,
-               debhelper-compat (= 13),
-               default-jdk-headless (>= 2:1.8) [!hurd-any !hppa !sparc !kfreebsd-any] <!pkg.subversion.nojava>,
-               dh-apache2,
-               dh-python,
-               doxygen,
-               junit4 [!hurd-any !hppa !sparc !kfreebsd-any] <!pkg.subversion.nojava>,
-               libapr1-dev,
-               libaprutil1-dev,
-               libdb5.3-dev,
-               libdbus-1-dev,
-               liblz4-dev (>= 0.0~r129),
-               libkf5coreaddons-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
-               libkf5i18n-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
-               libkf5wallet-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
-               libperl-dev,
-               libsasl2-dev,
-               libsecret-1-dev,
-               libserf-dev (>= 1.3.9-4~),
-               libsqlite3-dev (>= 3.8.7),
-               libtool,
-               libutf8proc-dev,
-               perl,
-               py3c-dev,
-               python3-all-dev,
-               rename,
-               ruby [!ia64 !kfreebsd-any] <!pkg.subversion.noruby>,
-               ruby-dev [!ia64 !kfreebsd-any] <!pkg.subversion.noruby>,
-               swig (>= 3.0.10),
-               zlib1g-dev
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-apache2,
+ dh-python,
+ apache2-bin <!nocheck>,
+ apache2-utils <!nocheck>,
+ autoconf,
+ bash-completion,
+ chrpath,
+ default-jdk-headless (>= 2:1.8) [!hurd-any !hppa !sparc !kfreebsd-any] <!pkg.subversion.nojava>,
+ doxygen,
+ junit4 [!hurd-any !hppa !sparc !kfreebsd-any] <!pkg.subversion.nojava>,
+ libapr1-dev,
+ libaprutil1-dev,
+ libdb5.3-dev,
+ libdbus-1-dev,
+ libkf5coreaddons-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
+ libkf5i18n-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
+ libkf5wallet-dev [!alpha !kfreebsd-any !m68k !sparc64] <!pkg.subversion.nokde>,
+ liblz4-dev (>= 0.0~r129),
+ libperl-dev,
+ libsasl2-dev,
+ libsecret-1-dev,
+ libserf-dev (>= 1.3.9-4~),
+ libsqlite3-dev (>= 3.8.7),
+ libtool,
+ libutf8proc-dev,
+ net-tools <!nocheck>,
+ perl,
+ py3c-dev,
+ python3-all-dev,
+ rename,
+ ruby [!ia64 !kfreebsd-any] <!pkg.subversion.noruby>,
+ ruby-dev [!ia64 !kfreebsd-any] <!pkg.subversion.noruby>,
+ swig (>= 3.0.10),
+ wget <!nocheck>,
+ zlib1g-dev,
 Build-Conflicts:
  libsvn-dev (<< 1.14~),
  libsvn-dev (>= 1.15~),
@@ -47,8 +52,15 @@ Standards-Version: 4.7.0
 
 Package: subversion
 Architecture: any
-Depends: libsvn1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
-Suggests: db5.3-util, libapache2-mod-svn, patch, subversion-tools
+Depends:
+ libsvn1 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ db5.3-util,
+ libapache2-mod-svn,
+ patch,
+ subversion-tools,
 Description: Advanced version control system
  Apache Subversion, also known as svn, is a centralised version control
  system.  Version control systems allow many individuals (who may be
@@ -64,8 +76,12 @@ Package: libsvn1
 Section: libs
 Architecture: any
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: libsqlite3-0 (>= 3.8.7), ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ libsqlite3-0 (>= 3.8.7),
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: Shared libraries used by Apache Subversion
  This package includes shared libraries to manipulate Apache Subversion
  (svn) repositories and working copies.  See the 'subversion' package for
@@ -75,11 +91,15 @@ Package: libsvn-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libapr1-dev,
-         libaprutil1-dev,
-         libsvn1 (= ${binary:Version}),
-         ${misc:Depends}
-Suggests: libserf-dev, libsvn-doc, zlib1g-dev
+Depends:
+ libapr1-dev,
+ libaprutil1-dev,
+ libsvn1 (= ${binary:Version}),
+ ${misc:Depends},
+Suggests:
+ libserf-dev,
+ libsvn-doc,
+ zlib1g-dev,
 Description: Development files for Apache Subversion libraries
  This package contains the symlinks, headers, and object files needed
  to compile and link programs which use libsvn1, the Apache Subversion
@@ -87,11 +107,13 @@ Description: Development files for Apache Subversion libraries
  that uses libsvn1.
 
 Package: libsvn-doc
-Suggests: libsvn-dev
+Suggests:
+ libsvn-dev,
 Section: doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends:
+ ${misc:Depends},
 Description: Developer documentation for libsvn
  This package contains development (API) documentation for libsvn1, the
  Apache Subversion libraries.  See the 'libsvn1' package for more information.
@@ -99,11 +121,14 @@ Description: Developer documentation for libsvn
 Package: libapache2-mod-svn
 Section: httpd
 Architecture: any
-Depends: libsvn1 (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: ${misc:Recommends}
-Suggests: db5.3-util
+Depends:
+ libsvn1 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${misc:Recommends},
+Suggests:
+ db5.3-util,
 Description: Apache Subversion server modules for Apache httpd
  This package provides the mod_dav_svn and mod_authz_svn modules for
  the Apache 2.4 web server.  These modules provide Apache Subversion's WebDAV
@@ -113,9 +138,14 @@ Description: Apache Subversion server modules for Apache httpd
 Package: python3-subversion
 Section: python
 Architecture: any
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
-Provides: ${python3:Provides}
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Provides:
+ ${python3:Provides},
 Description: Python3 bindings for Apache Subversion
  This is a set of Python3 interfaces to libsvn, the Apache Subversion
  libraries.  It is useful if you want to, for example, write a Python3
@@ -124,14 +154,20 @@ Description: Python3 bindings for Apache Subversion
 
 Package: subversion-tools
 Architecture: any
-Depends: subversion, ${misc:Depends}, ${shlibs:Depends}
-Recommends: default-mta | mail-transport-agent,
-            libconfig-inifiles-perl,
-            libsvn-perl,
-            liburi-perl,
-            rsync,
-            ${subversion-tools:Recommends}
-Suggests: ruby-svn, ${subversion-tools:Suggests}
+Depends:
+ subversion,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ default-mta | mail-transport-agent,
+ libconfig-inifiles-perl,
+ libsvn-perl,
+ liburi-perl,
+ rsync,
+ ${subversion-tools:Recommends},
+Suggests:
+ ruby-svn,
+ ${subversion-tools:Suggests},
 Description: Assorted tools related to Apache Subversion
  This package includes miscellaneous tools for use with Apache Subversion
  clients and servers:
@@ -155,7 +191,10 @@ Package: libsvn-java
 Section: java
 Architecture: any
 Build-Profiles: <!pkg.subversion.nojava>
-Depends: libsvn1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends:
+ libsvn1 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: Java bindings for Apache Subversion
  This is a set of Java classes which provide the functionality of
  libsvn, the Apache Subversion libraries.  It is useful if you want to,
@@ -165,9 +204,13 @@ Description: Java bindings for Apache Subversion
 Package: libsvn-perl
 Section: perl
 Architecture: any
-Pre-Depends: ${misc:Pre-Depends}
+Pre-Depends:
+ ${misc:Pre-Depends},
 Multi-Arch: same
-Depends: ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends}
+Depends:
+ ${misc:Depends},
+ ${perl:Depends},
+ ${shlibs:Depends},
 Description: Perl bindings for Apache Subversion
  This is a set of Perl interfaces to libsvn, the Apache Subversion libraries.
  It is useful if you want to, for example, write a Perl script that
@@ -179,8 +222,12 @@ Section: ruby
 Architecture: any
 Build-Profiles: <!pkg.subversion.noruby>
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ruby, ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ruby,
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: Ruby bindings for Apache Subversion
  This is a set of Ruby interfaces to libsvn, the Apache Subversion libraries.
  It is useful if you want to, for example, write a Ruby script that

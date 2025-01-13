@@ -242,6 +242,12 @@ check:
 	  cat $(DEB_BUILDDIR)/tests.log; \
 	  exit 1; \
 	fi
+	@if ! $(MAKE) -C $(DEB_BUILDDIR) davautocheck $(check_defs) PARALLEL=$(DEB_OPT_PARALLEL) APACHE_MPM=event; then \
+	  echo "###################################################"; \
+	  echo "mod_dav testsuite failed, 'tests.log' follows:"; echo; \
+	  cat $(DEB_BUILDDIR)/tests.log; \
+	  exit 1; \
+	fi
 
 check-swig-rb check-javahl:
 	$(MAKE_B) $@ $(check_defs) PARALLEL=$(DEB_OPT_PARALLEL)
