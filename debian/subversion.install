@@ -1,3 +1,5 @@
+BUILD/dummy_home/.subversion/config	etc/subversion
+BUILD/dummy_home/.subversion/servers	etc/subversion
 debian/tmp/usr/bin/svn			usr/bin
 debian/tmp/usr/bin/svnadmin		usr/bin
 debian/tmp/usr/bin/svnauthz		usr/bin
@@ -15,6 +17,3 @@ debian/tmp/usr/share/locale		usr/share
 debian/tmp/usr/share/man/man1		usr/share/man
 debian/tmp/usr/share/man/man5		usr/share/man
 debian/tmp/usr/share/man/man8		usr/share/man
-
-BUILD/dummy_home/.subversion/config	etc/subversion
-BUILD/dummy_home/.subversion/servers	etc/subversion
